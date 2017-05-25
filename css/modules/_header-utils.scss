@@ -1,0 +1,69 @@
+.m-header-utils {
+
+  &__list {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    flex-direction: row;
+    margin-top: 3rem;
+    margin-bottom: 0;
+
+    @include breakpoint(max-width $lg) {
+      flex-direction: column;
+      margin: 0;
+    }
+  }
+
+  &__item {
+    margin-right: 6.4rem;
+
+    &:nth-child(3) {
+      display: none;
+    }
+
+    @include breakpoint(min-width $lg) {
+      margin-right: 5rem;
+    }
+
+    @include breakpoint(max-width $lg) {
+      margin-bottom: 3rem;
+      margin-right: 0;
+      padding-left: 4rem;
+      padding-right: 2rem;
+
+      &:nth-child(3) {
+        display: block;
+      }
+
+      &:last-child {
+        margin: 0;
+      }
+    }
+  }
+
+  a {
+    align-items: center;
+    color: $charcoal-grey;
+    display: flex;
+    font-size: 1.4rem;
+    line-height: 2.47;
+    letter-spacing: .2px;
+    text-decoration: none;
+
+    @include breakpoint(max-width $lg) {
+      font-size: 2.4rem;
+      line-height: 1.44;
+    }
+
+    i {
+      font-size: 2rem;
+      padding-left: .7rem;
+      padding-right: .7rem;
+      padding-bottom: .4rem;
+
+      @include breakpoint(max-width $lg) {
+        display: none;
+      }
+    }
+  }
+}

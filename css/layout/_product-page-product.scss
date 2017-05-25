@@ -1,0 +1,14 @@
+.l-product-page-product {
+  @include clearfix;
+  @include container(127rem);
+
+  margin-top: 10rem;
+
+  //&__img {
+  //  @include span(5);
+  //}
+
+  &__description {
+    @include span(12);
+  }
+}

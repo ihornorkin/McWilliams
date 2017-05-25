@@ -1,0 +1,18 @@
+ .l-home-posts {
+
+  .m-blog-article {
+    &__image {
+      @include breakpoint(max-width $tablet) {
+        height: 60rem;
+      }
+    }
+  }
+
+  @include breakpoint(max-width $tablet) {
+    .m-blog-article:nth-of-type(n+3) {
+      .m-blog-article__image {
+        height: 40rem;
+      }
+    }
+  }
+}

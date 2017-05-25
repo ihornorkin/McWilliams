@@ -1,0 +1,27 @@
+include ../bemto/bemto
+include ../blocks/index
+include ../header/_header
+include ../footer/_footer
+
++header("All products")
+
+    main.l-wrapper
+      +b-info-section('img/rangpage.png', "OUR WINE")
+        block descr
+          p.lg From the flagships to the popular ranges, McWilliam’s wines retain a consistent standard of quality. The McWilliam’s winemakers adhere to a proven philosophy of excellence and distinction in every part of the winemaking process, an ideal that has developed over the winery’s 140 year history and turned McWilliam’s into the iconic brand it is today.
+          p.lg Whether you are dining out, celebrating an occasion or looking to unwind after a long day at work, there is something from the huge variety across the McWilliam’s range to offer a memorable drinking experience.
+
+      +b-product-search
+      +b.SECTION.l-products-main-list
+        +e.top-pagination
+          +b-pagination
+          button.m-btn SHOP OUR WINES
+        +e.products
+          +b-product-gallery(12)
+        +e.bottom-pagination
+          +b-pagination
+          button.m-btn SHOP OUR WINES
+
+
+
+  +footer()

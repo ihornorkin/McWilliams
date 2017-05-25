@@ -1,0 +1,32 @@
+.l-product-gallery {
+  @include container(127rem);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  &__item {
+    @include span(3);
+    align-items: flex-end;
+
+    display: flex;
+
+    @include breakpoint(max-width $tablet) {
+      @include span(6);
+    }
+  }
+
+  .m-product-card {
+    display: flex;
+    flex-direction: column;
+
+    &__description-wrapper {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    h2 {
+      //flex-grow: 1;
+    }
+  }
+}

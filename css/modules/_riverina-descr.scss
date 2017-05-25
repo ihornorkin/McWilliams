@@ -1,0 +1,68 @@
+.m-riverina-descr {
+  @include container(117rem);
+
+  &__descr {
+    @include span(6);
+    padding: 0 2.5rem;
+
+    @include breakpoint(max-width $tablet) {
+      @include span(12);
+      padding: 0 5rem;
+    }
+  }
+
+  &__list {
+    @include span(6);
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    @include breakpoint(max-width $tablet) {
+      @include span(12);
+      padding: 0 7rem;
+      width: 100%;
+    }
+
+    ul {
+      font-size: 2rem;
+      list-style-type: none;
+      margin: 1.8rem 0;
+      padding: 0;
+      text-transform: uppercase;
+
+      @include breakpoint(max-width $tablet) {
+        width: 100%;
+      }
+    }
+
+    li {
+      margin-bottom: 1.1rem;
+
+      @include breakpoint(max-width $tablet) {
+        margin-bottom: 1.6rem;
+      }
+    }
+
+    a {
+      @include breakpoint(max-width $tablet) {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+
+    li:not(:first-child) {
+      color: $sandy-brown;
+    }
+  }
+
+  &__icon {
+    display: none;
+    font-size: 3.6rem;
+
+    @include breakpoint(max-width $tablet) {
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+mixin b-dropdown-menu(name, ...items)
+
+  // BEGIN dropdown menu
+
+  +b.m-dropdown-menu
+    +e.menu
+      +e.A(href="#").item= name
+        i.i-icon-arrowdown
+
+      +e.sub-menu
+        +e.UL.sub-list
+          each val, index in items
+            +e.LI.sub-item
+              a(href="#")= val
+  // END dropdown menu

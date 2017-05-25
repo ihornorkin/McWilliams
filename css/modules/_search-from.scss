@@ -1,0 +1,59 @@
+.m-search-from {
+  $module: &;
+
+  &--active {
+
+
+    #{$module}__input {
+      border: solid 1px $charcoal-grey;
+      padding-left: 1.5rem;
+      padding-right: 4rem;
+      width: 20rem;
+
+      &:hover {
+        cursor: text;
+      }
+    }
+  }
+
+
+  &__input-wrapper {
+    position: relative;
+  }
+
+  &__label {
+    left: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &__input {
+    background-color: $white;
+    border: 0;
+    cursor: pointer;
+    font-size: 1.4rem;
+    height: 3rem;
+    line-height: 2.47;
+    outline: none;
+    padding: 0;
+    transition: width $animation-type-1;
+    width: 10.2rem;
+
+    &::placeholder {
+      color: $charcoal-grey;
+    }
+
+    &:focus {
+      cursor: default;
+    }
+  }
+
+  i {
+    font-size: 2rem;
+    position: absolute;
+    right: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}

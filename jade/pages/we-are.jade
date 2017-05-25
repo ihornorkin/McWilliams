@@ -1,0 +1,49 @@
+include ../bemto/bemto
+include ../blocks/index
+include ../header/_header
+include ../footer/_footer
+
++header("We Are")
+
+  main.l-wrapper
+    +b.l-we-are
+      +e.SECTION.info
+        +b-info-section('img/weareMCW.png', "WE ARE McWILLIAM’S ")
+          block descr
+            p.lg Few have helped shape the evolution of the Australian wine industry like McWilliam’s Wines. From humble beginnings on the outskirts of Corowa in 1877, the philosophy of putting quality of fruit first has ensured that McWilliam’s continues to be one of Australia’s most popular, respected and iconic wineries.
+
+      +e.SECTION.blog-post
+
+        +b-blog-article('img/wearemcw1.jpg', 1)
+          .m-heading
+            h1 WE ARE McWILLIAM’S
+
+          p.lg Building on six generations of Australian experience to craft quality wine for the world to enjoy.
+          a(href="#").m-btn LEARN MORE
+
+      +e.SECTION.horisontal-post
+
+        +b-horizontal-card("img/mcwfamily.png")
+          +b-we-are-card-descr("McWILLIAM’S FAMILY")
+            p The McWilliam family name stands for a long history of excellence in winemaking, a tradition which stretches back to the earliest days of the Australian wine industry. Since 1877, when founder Samuel McWilliam first planted vines on the banks of the Murray River in New South Wales, the McWilliam family have produced six consecutive generations of winemakers.
+            p The wines made by McWilliam’s are more than just benchmark expressions of Australian winemaking. They are wines that draw on more than 140 years of experience, wines that tell a story of a family’s passion for winemaking.
+
+            a(src="#").m-btn MEET THE FAMILY
+
+      +e.SECTION.posts
+
+        +b-blog-article('img/winemakers.png', 1)
+          .m-heading
+            h1 MEET THE WINEMAKERS
+
+          p.lg McWilliam’s Wines have always believed that quality wines are made by people, not companies.
+          a(href="#").m-btn LEARN MORE
+
+        +b-blog-article('img/AFFW_horiz_lg_BW@2x.png', 1)
+          .m-heading
+            h1 AUSTRALIA’S FIRST FAMILIES OF WINE
+
+          p.lg McWilliam’s Wines are proud members.
+          a(href="#").m-btn LEARN MORE
+
+  +footer()

@@ -1,0 +1,98 @@
+//Include all fonts here (used bourbon mixin)
+
+/****************************
+  Fonts
+ ***************************/
+@include font-face('Trenda-Bold', '../fonts/Trenda-Bold/Trenda-Bold', $file-formats: eot woff ttf svg);
+@include font-face('Baskerville-Normal', '../fonts/Baskerville-Normal/Baskerville-Normal', $file-formats: eot woff ttf svg);
+@include font-face('Proximanova-Regular', '../fonts/Proximanova-Regular/Proximanova-Regular', $file-formats: eot woff ttf svg);
+@include font-face('Baskerville-SC', '../fonts/Baskerville-SC/Baskerville-SC', $file-formats: eot woff ttf svg);
+@include font-face('Baskerville-Italic', '../fonts/Baskerville-Italic/Baskerville-Italic', $file-formats: eot woff ttf svg);
+@include font-face('TrendSans-One', '../fonts/TrendSans-One/TrendSans-One', $file-formats: eot woff ttf svg);
+
+/****************************
+  Typography
+ ***************************/
+
+h1 {
+  font-family: $trenda;
+  font-size: 2.8rem;
+  letter-spacing: 0.015rem;
+  line-height: 3.4rem;
+
+  @include breakpoint(max-width $tablet) {
+    font-size: 2.2rem;
+    line-height: 2.8rem;
+  }
+}
+
+h2 {
+  font-family: $trenda;
+  font-size: 2rem;
+  letter-spacing: 0.015rem;
+  line-height: 2.6rem;
+
+  @include breakpoint(max-width $tablet) {
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+
+  }
+}
+
+h3 {
+  font-family: $baskerville;
+  font-size: 2.4rem;
+  letter-spacing: 0.015rem;
+  line-height: 1;
+  font-weight: normal;
+
+  @include breakpoint(max-width $tablet) {
+    font-size: 1.8rem;
+  }
+}
+
+p {
+  font-family: $proximanova;
+  font-size: 1.6rem;
+  letter-spacing: 0.015rem;
+  line-height: 2.2rem;
+
+  @include breakpoint(max-width $tablet) {
+    font-size: 1.4rem;
+    line-height: 2rem;
+  }
+
+  &.lg {
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+
+    @include breakpoint(max-width $tablet) {
+      font-size: 1.6rem;
+      line-height: 2.2rem;
+    }
+  }
+}
+
+a {
+  color: $sandy-brown;
+  cursor: pointer;
+  transition: color $animation-type-1;
+  text-decoration: none;
+
+  &:hover {
+    color: $pancho;
+  }
+
+  &:active,
+  &:focus {
+    color: #996140;
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-up {
+  text-transform: uppercase;
+}

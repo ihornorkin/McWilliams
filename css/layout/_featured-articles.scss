@@ -1,0 +1,20 @@
+.l-featured-articles {
+  @include clearfix;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+
+  .m-featured-article {
+    @include span(4);
+    border-bottom: 1px solid $sandy-brown;
+
+    @include breakpoint(max-width $tablet) {
+      @include span(12);
+      border-right: 0;
+    }
+
+    &:nth-of-type(3n+3) {
+      border-right: 0;
+    }
+  }
+}

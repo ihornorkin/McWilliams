@@ -1,0 +1,66 @@
+.m-pagination {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  &__counter {
+    margin-right: 4.5rem;
+    text-transform: uppercase;
+
+    @include breakpoint(max-width $tablet) {
+      margin-right: 2rem;
+    }
+
+    span {
+      font-size: 1.6rem;
+      letter-spacing: 0.2px;
+      line-height: 1.38;
+
+      &:first-child {
+        margin-right: .5rem;
+      }
+
+      @include breakpoint(max-width $tablet) {
+        font-size: 1.4rem;
+      }
+    }
+  }
+
+  &__list {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0;
+
+    li:not(:last-child) {
+      margin-right: 2.5rem;
+
+      @include breakpoint(max-width $tablet) {
+        margin-right: 2rem;
+      }
+
+    }
+
+    li.active {
+      color: $black;
+    }
+
+    a {
+      color: #5b5a5a;
+
+      @include breakpoint(max-width $tablet) {
+        font-size: 1.28rem;
+      }
+
+      &:hover {
+        color: $black;
+      }
+    }
+
+    i {
+      display: flex;
+    }
+  }
+}

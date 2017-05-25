@@ -1,0 +1,45 @@
+.m-privacy-list {
+  text-align: center;
+
+  &__list {
+    list-style-type: none;
+  }
+
+  &__item {
+    display: inline-block;
+
+    a {
+      color: $black;
+      font-size: 1.6rem;
+      margin-left: 4.5rem;
+
+      @include breakpoint(max-width $tablet) {
+        margin-left: 1rem;
+      }
+
+      &:hover {
+        color: $pancho;
+      }
+
+      &::after {
+        color: $black;
+        margin-left: 3.5rem;
+        content: '/';
+        font-size: 1.6rem;
+
+        @include breakpoint(max-width $tablet) {
+          margin-left: 1rem;
+        }
+      }
+    }
+
+    &:last-of-type {
+      a {
+
+        &::after {
+          content: '';
+        }
+      }
+    }
+  }
+}

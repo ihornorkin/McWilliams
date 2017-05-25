@@ -1,0 +1,20 @@
+.l-our-winemakers {
+
+  &__info {
+    margin-bottom: 2.5rem;
+
+    @include breakpoint(max-width $mobile) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__winemakers {
+    margin-bottom: 3rem;
+
+    @include breakpoint(max-width $mobile) {
+      .m-horizontal-card:last-of-type {
+        border-bottom: 0;
+      }
+    }
+  }
+}

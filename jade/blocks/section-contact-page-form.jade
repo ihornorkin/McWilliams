@@ -1,0 +1,28 @@
+mixin b-contact-page-form
+
+  +b.m-contact-page-form
+
+    //BEGIN form
+    +e.FORM(action="").form
+      // LEFT
+      +e.user-info
+        +e.H2.heading HOW CAN WE HELP?
+        +e.P.descr Please fill out your details and leave us a brief message and we’ll be in touch as soon as possible. For specific product feedback please use the form located &nbsp;
+          a(href="#") HERE.
+
+        +e.input-wrapper
+          .m-input-group
+            input(type="text" placeholder="First Name" required)
+          .m-input-group
+            input(type="text" placeholder="Last Name" required)
+          .m-input-group
+            input(type="email" placeholder="email" required)
+          .m-input-group
+            input(type="tel" placeholder="Phone" required)
+      // RIGHT
+      +e.text-area
+        textarea(placeholder="Message")
+
+      button(type="submit").m-btn SUBMIT
+
+    //END form

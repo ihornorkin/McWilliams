@@ -1,0 +1,68 @@
+.l-cellar-door {
+
+  .m-info-section {
+    @include breakpoint(max-width $tablet) {
+      border-bottom: 1px solid $sandy-brown;
+    }
+  }
+
+  &__contact {
+    @include container(120rem);
+
+    margin-bottom: 8.2rem;
+    margin-top: 3.3rem;
+
+    @include breakpoint(max-width $tablet) {
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__contact-info {
+    @include span(3.3);
+
+    @include breakpoint(max-width $tablet) {
+      @include span(12);
+    }
+  }
+
+  .m-contact-us {
+    @include breakpoint(max-width $tablet) {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  &__contact-descr {
+    @include span(8.7);
+    padding-right: 2.5rem;
+
+    @include breakpoint(max-width $tablet) {
+      @include span(12);
+      padding: 0 2.5rem;
+    }
+  }
+
+  &__cellar-door {
+    margin-bottom: 2.2rem;
+
+    @include breakpoint(max-width $tablet) {
+      margin: 0;
+    }
+  }
+
+  .m-horizontal-card {
+
+    @include breakpoint(max-width $tablet) {
+      &:last-of-type {
+        border-bottom: 0;
+      }
+
+      &__image {
+        height: 40rem;
+        object-position: 90%;
+      }
+    }
+  }
+
+}

@@ -1,0 +1,176 @@
+mixin header(text)
+  doctype html
+
+  html(lang="en")
+
+    head
+      meta(charset="UTF-8")
+      meta(http-equiv="X-UA-Compatible" content="IE=edge")
+      meta(name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0")
+      meta(name="description" content="")
+      meta(name="description" content="")
+
+      block title
+        title= text
+
+      // Grid Styles
+      style.
+
+      // First Sections b-navigation styles
+      style.
+      // Fonts
+
+      <!--[if lt IE 9]>
+      script(src="libs/html5shiv/dist/html5shiv.js")
+      <![endif]-->
+      // Load CSS, CSS Localstorage & WebFonts Main Function
+      script.
+        !function (e) {
+          "use strict";
+
+          function t(e, t, n) {
+            e.addEventListener ? e.addEventListener(t, n, !1) : e.attachEvent && e.attachEvent("on" + t, n)
+          }
+
+          function n(t, n) {
+            return e.localStorage && localStorage[t + "_content"] && localStorage[t + "_file"] === n
+          }
+
+          function a(t, a) {
+            if (e.localStorage && e.XMLHttpRequest) n(t, a) ? o(localStorage[t + "_content"]) : l(t, a);
+            else {
+              var s = r.createElement("link");
+              s.href = a, s.id = t, s.rel = "stylesheet", s.type = "text/css", r.getElementsByTagName("head")[0].appendChild(s), r.cookie = t
+            }
+          }
+
+          function l(e, t) {
+            var n = new XMLHttpRequest;
+            n.open("GET", t, !0), n.onreadystatechange = function () {
+              4 === n.readyState && 200 === n.status && (o(n.responseText), localStorage[e + "_content"] = n.responseText, localStorage[e + "_file"] = t)
+            }, n.send()
+          }
+
+          function o(e) {
+            var t = r.createElement("style");
+            t.setAttribute("type", "text/css"), r.getElementsByTagName("head")[0].appendChild(t), t.styleSheet ? t.styleSheet.cssText = e : t.innerHTML = e
+          }
+
+          var r = e.document;
+          e.loadCSS = function (e, t, n) {
+            var a, l = r.createElement("link");
+            if (t) a = t;
+            else {
+              var o;
+              o = r.querySelectorAll ? r.querySelectorAll("style,link[rel=stylesheet],script") : (r.body || r.getElementsByTagName("head")[0]).childNodes, a = o[o.length - 1]
+            }
+            var s = r.styleSheets;
+            l.rel = "stylesheet", l.href = e, l.media = "only x", a.parentNode.insertBefore(l, t ? a : a.nextSibling);
+            var c = function (e) {
+              for (var t = l.href, n = s.length; n--;)
+                if (s[n].href === t) return e();
+              setTimeout(function () {
+                c(e)
+              })
+            };
+            return l.onloadcssdefined = c, c(function () {
+              l.media = n || "all"
+            }), l
+          }, e.loadLocalStorageCSS = function (l, o) {
+            n(l, o) || r.cookie.indexOf(l) > -1 ? a(l, o) : t(e, "load", function () {
+              a(l, o)
+            })
+          }
+        }(this);
+
+      // Load CSS Start
+      // script.
+           loadCSS( "/css/header.min.css", false, "all" );
+      script.
+        loadCSS("libs/normalize-css/normalize.css", false, "all");
+        loadCSS("css/styles.min.css", false, "all");
+      // Load CSS End
+      // Load CSS Compilled without JS
+      noscript.
+        <link rel="stylesheet" href="libs/normalize-css/normalize.css">
+        <link rel="stylesheet" href="css/styles.min.css">
+
+    body
+        +b.HEADER.l-header
+          +e.logo
+            a(href="index.html")
+              +e.IMG(src='img/logo.svg', alt='logo').logo-svg
+
+          +e.menu-wrapper
+
+            +e.utills
+              +b.m-header-utils
+                +e.UL.list
+                  +e.LI.item
+                    a(href='#') JOIN OUR MAILING LIST
+                      i.i-icon-mail
+                  +e.LI.item
+                    a(href='#') SHOP WINES
+                      i.i-icon-arrowright
+                  +e.LI.item
+                    a(href='#') SEARCH
+                      i.i-icon-search
+
+                  +e.LI.item
+                    +b-search-form
+
+            +e.menu
+              +b.NAV.m-menu
+                +e.UL.list
+                  //MENU ITEM
+                  li.menu-item
+                    a(href="all-products.html") OUR WINE
+
+                  //MENU ITEM
+                  li.menu-item
+                    a(href="we-are.html") WE ARE McWILLIAM’S
+
+                    //SUB menu
+                    ul.sub-menu
+                      li.menu-item
+                        a(href="#") OUR HISTORY &amp; HERITAGE
+                      li.menu-item
+                        a(href="#") McWILLIAM’S FAMILY
+                      li.menu-item
+                        a(href="#") OUR WINEMAKERS
+                      li.menu-item
+                        a(href="#") AUSTRALIA’S FIRST FAMILIES OF WINE
+
+                  //MENU ITEM
+                  li.menu-item
+                    a(href="we-are.html") OUR BACKYARD
+
+                    //SUB menu
+                    ul.sub-menu
+                      li.menu-item
+                        a(href="#") RIVERINA
+                      li.menu-item
+                        a(href="#") HILLTOPS
+                      li.menu-item
+                        a(href="#") ORANGE
+                      li.menu-item
+                        a(href="#") TUMBARUMBA
+                      li.menu-item
+                        a(href="#") CANBERRA
+                      li.menu-item
+                        a(href="#") VISIT THE RIVERINA
+
+                  //MENU ITEM
+                  li.menu-item
+                    a(href="community.html") OUR COMMUNITY
+
+                  //MENU ITEM
+                  li.menu-item
+                    a(href="contact-page.html") CONTACT
+
+          +e.mobile-menu
+            .hamburger.hamburger--spring.js-hamburger
+              .hamburger-box
+                .hamburger-inner
+        block

@@ -1,0 +1,15 @@
+.l-corporate-page {
+  border-top: 1px solid $sandy-brown;
+  margin-bottom: 10rem;
+  margin-top: 7rem;
+  padding: 0 2.5rem;
+
+  .m-corporate {
+    @include container(117rem);
+  }
+
+  @include breakpoint(max-width $mobile) {
+    margin-bottom: 8.5rem;
+    margin-top: 1rem;
+  }
+}

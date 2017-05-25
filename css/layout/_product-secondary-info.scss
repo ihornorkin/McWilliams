@@ -1,0 +1,42 @@
+.l-product-secondary-info {
+  @include container();
+
+  @include breakpoint(max-width $tablet) {
+    padding: 0 7rem 0 4rem;
+  }
+
+  &__location,
+  &__aroma,
+  &__palette {
+    @include span(4);
+
+    @include breakpoint(max-width $tablet) {
+      @include span(12);
+    }
+  }
+
+  &__location {
+    padding-left: 9.5%;
+
+    @include breakpoint(max-width $tablet) {
+      display: flex;
+      justify-content: space-between;
+      padding: 0;
+    }
+  }
+
+  &__aroma,
+  &__palette {
+    padding-right: 13.5%;
+
+    @include breakpoint(max-width $tablet) {
+      padding: 0;
+    }
+  }
+
+  &__aroma {
+    @include breakpoint(max-width $tablet) {
+      margin-bottom: 5rem;
+    }
+  }
+}

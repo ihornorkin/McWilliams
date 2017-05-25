@@ -1,0 +1,16 @@
+mixin b-history-card(cls, img, heading, descr)
+
+  //BEGIN history card
+
+  +b.ARTICLE.m-history-card(class= cls)
+    +e.img-wrapper
+      +e.IMG(src= img).img
+      +e.content-box-wrapper
+        +e.content-box
+          +e.H2.heading= heading
+          p.lg= descr
+
+    +e.descr
+      span= heading
+
+  //END history card

@@ -1,0 +1,16 @@
+mixin b-contact-form
+
+  //BEGIN contact form
+  +b.SECTION.l-contact-form
+    +e.description
+      h2 BECOME PART OF THE McWILLIAM’S COMMUNITY.
+      p Join our mailing list for our latest news, offers and events.
+    +e.form
+      +b.FORM(action="").m-contact-form
+        .m-input-group
+          +e.INPUT(type="text" placeholder="Name").input
+        .m-input-group
+          +e.INPUT(type="text" placeholder="e-mail").input
+        button.m-btn SIGN UP
+
+  //END contact form

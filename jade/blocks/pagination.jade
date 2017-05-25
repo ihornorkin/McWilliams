@@ -1,0 +1,27 @@
+mixin b-pagination
+
+  //BEGIN pagination
+
+  +b.m-pagination
+    +e.counter
+      span 18
+      span pages
+
+    +e.UL.list
+      li
+        a(href="#")
+          i.i-icon-arrowleft
+
+      li.active
+        a(href="#") 1
+      li
+        a(href="#") 2
+      li
+        a(href="#") 3
+
+      li
+        a(href="#")
+          i.i-icon-arrowright
+
+
+  //END pagination

@@ -1,0 +1,10 @@
+mixin b-info-section(img, heading, cls)
+
+  // BEGIN info section
+  +b.m-info-section(class= cls)
+    +e.IMG(src= img).bg-image
+    +e.wrapper
+      +e.description
+        h1.text-up= heading
+
+        block

@@ -1,0 +1,25 @@
+.l-posts-wrapper {
+  .m-blog-article {
+    $module: &;
+
+    @include breakpoint(max-width $tablet) {
+      img {
+        height: 40rem;
+      }
+    }
+
+    &:nth-child(1),
+    &:nth-child(2) {
+
+      @include breakpoint(max-width $tablet) {
+        img {
+          height: 60rem;
+        }
+      }
+    }
+
+    &__descr-wrapper {
+      min-height: 0;
+    }
+  }
+}

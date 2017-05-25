@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name="description" content="">
+    <meta name="description" content="">
+    <title>All products</title>
+    <!-- Grid Styles-->
+    <style></style>
+    <!-- First Sections b-navigation styles-->
+    <style></style>
+    <!-- Fonts-->
+    <!--[if lt IE 9]>
+    <script src="libs/html5shiv/dist/html5shiv.js"></script><![endif]-->
+    <!-- Load CSS, CSS Localstorage & WebFonts Main Function-->
+    <script>
+      !function (e) {
+        "use strict";
+      
+        function t(e, t, n) {
+          e.addEventListener ? e.addEventListener(t, n, !1) : e.attachEvent && e.attachEvent("on" + t, n)
+        }
+      
+        function n(t, n) {
+          return e.localStorage && localStorage[t + "_content"] && localStorage[t + "_file"] === n
+        }
+      
+        function a(t, a) {
+          if (e.localStorage && e.XMLHttpRequest) n(t, a) ? o(localStorage[t + "_content"]) : l(t, a);
+          else {
+            var s = r.createElement("link");
+            s.href = a, s.id = t, s.rel = "stylesheet", s.type = "text/css", r.getElementsByTagName("head")[0].appendChild(s), r.cookie = t
+          }
+        }
+      
+        function l(e, t) {
+          var n = new XMLHttpRequest;
+          n.open("GET", t, !0), n.onreadystatechange = function () {
+            4 === n.readyState && 200 === n.status && (o(n.responseText), localStorage[e + "_content"] = n.responseText, localStorage[e + "_file"] = t)
+          }, n.send()
+        }
+      
+        function o(e) {
+          var t = r.createElement("style");
+          t.setAttribute("type", "text/css"), r.getElementsByTagName("head")[0].appendChild(t), t.styleSheet ? t.styleSheet.cssText = e : t.innerHTML = e
+        }
+      
+        var r = e.document;
+        e.loadCSS = function (e, t, n) {
+          var a, l = r.createElement("link");
+          if (t) a = t;
+          else {
+            var o;
+            o = r.querySelectorAll ? r.querySelectorAll("style,link[rel=stylesheet],script") : (r.body || r.getElementsByTagName("head")[0]).childNodes, a = o[o.length - 1]
+          }
+          var s = r.styleSheets;
+          l.rel = "stylesheet", l.href = e, l.media = "only x", a.parentNode.insertBefore(l, t ? a : a.nextSibling);
+          var c = function (e) {
+            for (var t = l.href, n = s.length; n--;)
+              if (s[n].href === t) return e();
+            setTimeout(function () {
+              c(e)
+            })
+          };
+          return l.onloadcssdefined = c, c(function () {
+            l.media = n || "all"
+          }), l
+        }, e.loadLocalStorageCSS = function (l, o) {
+          n(l, o) || r.cookie.indexOf(l) > -1 ? a(l, o) : t(e, "load", function () {
+            a(l, o)
+          })
+        }
+      }(this);
+      
+    </script>
+    <!-- Load CSS Start-->
+    <!-- script.loadCSS( "/css/header.min.css", false, "all" );
+    -->
+    <script>
+      loadCSS("libs/normalize-css/normalize.css", false, "all");
+      loadCSS("css/styles.min.css", false, "all");
+    </script>
+    <!-- Load CSS End-->
+    <!-- Load CSS Compilled without JS-->
+    <noscript>
+      <link rel="stylesheet" href="libs/normalize-css/normalize.css">
+      <link rel="stylesheet" href="css/styles.min.css">
+      
+    </noscript>
+  </head>
+  <body>
+    <header class="l-header">
+      <div class="l-header__logo"><a href="index.html"><img src="img/logo.svg" alt="logo" class="l-header__logo-svg" title=""/></a>
+      </div>
+      <div class="l-header__menu-wrapper">
+        <div class="l-header__utills">
+          <div class="m-header-utils">
+            <ul class="m-header-utils__list">
+              <li class="m-header-utils__item"><a href="#">JOIN OUR MAILING LIST<i class="i-icon-mail"></i></a>
+              </li>
+              <li class="m-header-utils__item"><a href="#">SHOP WINES<i class="i-icon-arrowright"></i></a>
+              </li>
+              <li class="m-header-utils__item"><a href="#">SEARCH<i class="i-icon-search"></i></a>
+              </li>
+              <li class="m-header-utils__item">
+                <!-- BEGIN search form-->
+                <form action="" class="m-search-from">
+                  <div class="m-search-from__input-wrapper"><input type="text" id="search" placeholder="SEARCH" class="m-search-from__input"/><i class="i-icon-search"></i>
+                  </div>
+                </form>
+                <!-- END search form-->
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="l-header__menu">
+          <nav class="m-menu">
+            <ul class="m-menu__list">
+              <!--MENU ITEM-->
+              <li class="menu-item"><a href="all-products.html">OUR WINE</a></li>
+              <!--MENU ITEM-->
+              <li class="menu-item"><a href="we-are.html">WE ARE McWILLIAM’S</a>
+                <!--SUB menu-->
+                <ul class="sub-menu">
+                  <li class="menu-item"><a href="#">OUR HISTORY &amp; HERITAGE</a></li>
+                  <li class="menu-item"><a href="#">McWILLIAM’S FAMILY</a></li>
+                  <li class="menu-item"><a href="#">OUR WINEMAKERS</a></li>
+                  <li class="menu-item"><a href="#">AUSTRALIA’S FIRST FAMILIES OF WINE</a></li>
+                </ul>
+              </li>
+              <!--MENU ITEM-->
+              <li class="menu-item"><a href="we-are.html">OUR BACKYARD</a>
+                <!--SUB menu-->
+                <ul class="sub-menu">
+                  <li class="menu-item"><a href="#">RIVERINA</a></li>
+                  <li class="menu-item"><a href="#">HILLTOPS</a></li>
+                  <li class="menu-item"><a href="#">ORANGE</a></li>
+                  <li class="menu-item"><a href="#">TUMBARUMBA</a></li>
+                  <li class="menu-item"><a href="#">CANBERRA</a></li>
+                  <li class="menu-item"><a href="#">VISIT THE RIVERINA</a></li>
+                </ul>
+              </li>
+              <!--MENU ITEM-->
+              <li class="menu-item"><a href="community.html">OUR COMMUNITY</a></li>
+              <!--MENU ITEM-->
+              <li class="menu-item"><a href="contact-page.html">CONTACT</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="l-header__mobile-menu">
+        <div class="hamburger hamburger--spring js-hamburger">
+          <div class="hamburger-box">
+            <div class="hamburger-inner"></div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="l-wrapper">
+      <!-- BEGIN info section-->
+      <div class="m-info-section"><img src="img/rangpage.png" class="m-info-section__bg-image" alt="" role="presentation"/>
+        <div class="m-info-section__wrapper">
+          <div class="m-info-section__description">
+            <h1 class="text-up">OUR WINE</h1>
+            <p class="lg">From the flagships to the popular ranges, McWilliam’s wines retain a consistent standard of quality. The McWilliam’s winemakers adhere to a proven philosophy of excellence and distinction in every part of the winemaking process, an ideal that has developed over the winery’s 140 year history and turned McWilliam’s into the iconic brand it is today.</p>
+            <p class="lg">Whether you are dining out, celebrating an occasion or looking to unwind after a long day at work, there is something from the huge variety across the McWilliam’s range to offer a memorable drinking experience.</p>
+          </div>
+        </div>
+      </div>
+      <!--BEGIN product search-->
+      <div class="m-product-search">
+        <div class="m-product-search__wrapper">
+          <div class="m-product-search__title">SEARCH BY:
+          </div>
+          <ul class="m-product-search__list">
+            <li class="m-product-search__item"><a href="#">ALL WINES</a>
+            </li>
+            <li class="m-product-search__item"><a href="#">RANGE</a>
+            </li>
+            <li class="m-product-search__item"><a href="#">WINE TYPE</a>
+            </li>
+            <li class="m-product-search__item"><a href="#" class="m-product-search__link">VARIETAL</a>
+            </li>
+            <li class="m-product-search__item"><a href="#" class="m-product-search__link">PERFECT FOR...</a>
+              <ul class="m-product-search__sub-search">
+                <li><a href="#">EVERYDAY</a></li>
+                <li><a href="#">GIFTING</a></li>
+                <li><a href="#">WARM DAYS</a></li>
+                <li><a href="#">ENTERTAINING</a></li>
+                <li><a href="#">SHARING</a></li>
+              </ul>
+            </li>
+          </ul>
+          <div class="m-product-search__search">
+            <div class="m-input-group">
+              <input type="text" placeholder="What do you like to drink?"/>
+              <div class="m-btn"><i class="i-icon-search"></i></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--END product search-->
+      <section class="l-products-main-list">
+        <div class="l-products-main-list__top-pagination">
+          <!--BEGIN pagination-->
+          <div class="m-pagination">
+            <div class="m-pagination__counter"><span>18</span><span>pages</span>
+            </div>
+            <ul class="m-pagination__list">
+              <li><a href="#"><i class="i-icon-arrowleft"></i></a></li>
+              <li class="active"><a href="#">1</a></li>
+              <li><a href="#">2</a></li>
+              <li><a href="#">3</a></li>
+              <li><a href="#"><i class="i-icon-arrowright"></i></a></li>
+            </ul>
+          </div>
+          <!--END pagination-->
+          <button class="m-btn">SHOP OUR WINES</button>
+        </div>
+        <div class="l-products-main-list__products">
+          <div class="l-product-gallery">
+            <!--BEGIN gallery item-->
+            <div class="l-product-gallery__item">
+              <div class="m-product-card">
+                <figure class="m-product-card__image-wrapper"><img src="img/product-img.png" class="m-product-card__img" alt="" role="presentation"/>
+                </figure>
+                <div class="m-product-card__description-wrapper">
+                  <h2 class="m-product-card__name">PRODUCT NAME
+                  </h2>
+                  <p class="m-product-card__varietal">VARIETAL
+                  </p><a class="m-link-btn">LEARN MORE</a>
+                </div>
+              </div>
+            </div>
+            <!--END gallery item-->
+            <!--BEGIN gallery item-->
+            <div class="l-product-gallery__item">
+              <div class="m-product-card">
+                <figure class="m-product-card__image-wrapper"><img src="img/product-img.png" class="m-product-card__img" alt="" role="presentation"/>
+                </figure>
+                <div class="m-product-card__description-wrapper">
+                  <h2 class="m-product-card__name">PRODUCT NAME
+                  </h2>
+                  <p class="m-product-card__varietal">VARIETAL
+                  </p><a class="m-link-btn">LEARN MORE</a>
+                </div>
+              </div>
+            </div>
+            <!--END gallery item-->
+            <!--BEGIN gallery item-->
+            <div class="l-product-gallery__item">
+              <div class="m-product-card">
+                <figure class="m-product-card__image-wrapper"><img src="img/product-img.png" class="m-product-card__img" alt="" role="presentation"/>
+                </figure>
+                <div class="m-product-card__description-wrapper">
+                  <h2 class="m-product-card__name">PRODUCT NAME
+                  </h2>
+                  <p class="m-product-card__varietal">VARIETAL
+                  </p><a class="m-link-btn">LEARN MORE</a>
+                </div>
+              </div>
+            </div>
+            <!--END gallery item-->
+            <!--BEGIN gallery item-->
+            <div class="l-product-gallery__item">
+              <div class="m-product-card">
+                <figure class="m-product-card__image-wrapper"><img src="img/product-img.png" class="m-product-card__img" alt="" role="presentation"/>
+                </figure>
+                <div class="m-product-card__description-wrapper">
+                  <h2 class="m-product-card__name">PRODUCT NAME
+                  </h2>
+                  <p class="m-product-card__varietal">VARIETAL
+                  </p><a class="m-link-btn">LEARN MORE</a>
+                </div>
+              </div>
+            </div>
+            <!--END gallery item-->
+            <!--BEGIN gallery item-->
+            <div class="l-product-gallery__item">
+              <div class="m-product-card">
+                <figure class="m-product-card__image-wrapper"><img src="img/product-img.png" class="m-product-card__img" alt="" role="presentation"/>
+                </figure>
+                <div class="m-product-card__description-wrapper">
+                  <h2 class="m-product-card__name">PRODUCT NAME
+                  </h2>
+                  <p class="m-product-card__varietal">VARIETAL
+                  </p><a class="m-link-btn">LEARN MORE</a>
+                </div>
+              </div>
+            </div>
+            <!--END gallery item-->
+            <!--BEGIN gallery item-->
+            <div class="l-product-gallery__item">
+              <div class="m-product-card">
+                <figure class="m-product-card__image-wrapper"><img src="img/product-img.png" class="m-product-card__img" alt="" role="presentation"/>
+                </figure>
+                <div class="m-product-card__description-wrapper">
+                  <h2 class="m-product-card__name">PRODUCT NAME
+                  </h2>
+                  <p class="m-product-card__varietal">VARIETAL
+                  </p><a class="m-link-btn">LEARN MORE</a>
+                </div>
+              </div>
+            </div>
+            <!--END gallery item-->
+            <!--BEGIN gallery item-->
+            <div class="l-product-gallery__item">
+              <div class="m-product-card">
+                <figure class="m-product-card__image-wrapper"><img src="img/product-img.png" class="m-product-card__img" alt="" role="presentation"/>
+                </figure>
+                <div class="m-product-card__description-wrapper">
+                  <h2 class="m-product-card__name">PRODUCT NAME
+                  </h2>
+                  <p class="m-product-card__varietal">VARIETAL
+                  </p><a class="m-link-btn">LEARN MORE</a>
+                </div>
+              </div>
+            </div>
+            <!--END gallery item-->
+            <!--BEGIN gallery item-->
+            <div class="l-product-gallery__item">
+              <div class="m-product-card">
+                <figure class="m-product-card__image-wrapper"><img src="img/product-img.png" class="m-product-card__img" alt="" role="presentation"/>
+                </figure>
+                <div class="m-product-card__description-wrapper">
+                  <h2 class="m-product-card__name">PRODUCT NAME
+                  </h2>
+                  <p class="m-product-card__varietal">VARIETAL
+                  </p><a class="m-link-btn">LEARN MORE</a>
+                </div>
+              </div>
+            </div>
+            <!--END gallery item-->
+            <!--BEGIN gallery item-->
+            <div class="l-product-gallery__item">
+              <div class="m-product-card">
+                <figure class="m-product-card__image-wrapper"><img src="img/product-img.png" class="m-product-card__img" alt="" role="presentation"/>
+                </figure>
+                <div class="m-product-card__description-wrapper">
+                  <h2 class="m-product-card__name">PRODUCT NAME
+                  </h2>
+                  <p class="m-product-card__varietal">VARIETAL
+                  </p><a class="m-link-btn">LEARN MORE</a>
+                </div>
+              </div>
+            </div>
+            <!--END gallery item-->
+            <!--BEGIN gallery item-->
+            <div class="l-product-gallery__item">
+              <div class="m-product-card">
+                <figure class="m-product-card__image-wrapper"><img src="img/product-img.png" class="m-product-card__img" alt="" role="presentation"/>
+                </figure>
+                <div class="m-product-card__description-wrapper">
+                  <h2 class="m-product-card__name">PRODUCT NAME
+                  </h2>
+                  <p class="m-product-card__varietal">VARIETAL
+                  </p><a class="m-link-btn">LEARN MORE</a>
+                </div>
+              </div>
+            </div>
+            <!--END gallery item-->
+            <!--BEGIN gallery item-->
+            <div class="l-product-gallery__item">
+              <div class="m-product-card">
+                <figure class="m-product-card__image-wrapper"><img src="img/product-img.png" class="m-product-card__img" alt="" role="presentation"/>
+                </figure>
+                <div class="m-product-card__description-wrapper">
+                  <h2 class="m-product-card__name">PRODUCT NAME
+                  </h2>
+                  <p class="m-product-card__varietal">VARIETAL
+                  </p><a class="m-link-btn">LEARN MORE</a>
+                </div>
+              </div>
+            </div>
+            <!--END gallery item-->
+            <!--BEGIN gallery item-->
+            <div class="l-product-gallery__item">
+              <div class="m-product-card">
+                <figure class="m-product-card__image-wrapper"><img src="img/product-img.png" class="m-product-card__img" alt="" role="presentation"/>
+                </figure>
+                <div class="m-product-card__description-wrapper">
+                  <h2 class="m-product-card__name">PRODUCT NAME
+                  </h2>
+                  <p class="m-product-card__varietal">VARIETAL
+                  </p><a class="m-link-btn">LEARN MORE</a>
+                </div>
+              </div>
+            </div>
+            <!--END gallery item-->
+          </div>
+        </div>
+        <div class="l-products-main-list__bottom-pagination">
+          <!--BEGIN pagination-->
+          <div class="m-pagination">
+            <div class="m-pagination__counter"><span>18</span><span>pages</span>
+            </div>
+            <ul class="m-pagination__list">
+              <li><a href="#"><i class="i-icon-arrowleft"></i></a></li>
+              <li class="active"><a href="#">1</a></li>
+              <li><a href="#">2</a></li>
+              <li><a href="#">3</a></li>
+              <li><a href="#"><i class="i-icon-arrowright"></i></a></li>
+            </ul>
+          </div>
+          <!--END pagination-->
+          <button class="m-btn">SHOP OUR WINES</button>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
+<footer class="l-footer">
+  <!--BEGIN contact form-->
+  <section class="l-contact-form">
+    <div class="l-contact-form__description">
+      <h2>BECOME PART OF THE McWILLIAM’S COMMUNITY.</h2>
+      <p>Join our mailing list for our latest news, offers and events.</p>
+    </div>
+    <div class="l-contact-form__form">
+      <form action="" class="m-contact-form">
+        <div class="m-input-group"><input type="text" placeholder="Name" class="m-contact-form__input"/>
+        </div>
+        <div class="m-input-group"><input type="text" placeholder="e-mail" class="m-contact-form__input"/>
+        </div>
+        <button class="m-btn">SIGN UP</button>
+      </form>
+    </div>
+  </section>
+  <!--END contact form-->
+  <div class="l-footer__socail">
+    <div class="m-footer-logo-list">
+      <div class="m-footer-logo-list__list">
+        <div class="m-footer-logo-list__item"><a href="#"><i class="i-icon-facebook"></i></a>
+        </div>
+        <div class="m-footer-logo-list__item"><a href="#"><i class="i-icon-instagram"></i></a>
+        </div>
+        <div class="m-footer-logo-list__item"><a href="#"><i class="i-icon-twitter"></i></a>
+        </div>
+        <div class="m-footer-logo-list__item"><a href="#"><i class="i-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="l-footer__privacy">
+    <div class="m-privacy-list">
+      <div class="m-privacy-list__list">
+        <div class="m-privacy-list__item"><a hre="#">CONTACT US</a>
+        </div>
+        <div class="m-privacy-list__item"><a hre="#">TERMS &amp; CONDITIONS</a>
+        </div>
+        <div class="m-privacy-list__item"><a hre="#">PRIVACY POLICY</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="l-footer__menu">
+    <!-- BEGIN dropdown menu-->
+    <div class="m-dropdown-menu">
+      <div class="m-dropdown-menu__menu"><a href="#" class="m-dropdown-menu__item">INTERNATIONAL WEBSITES<i class="i-icon-arrowdown"></i></a>
+        <div class="m-dropdown-menu__sub-menu">
+          <ul class="m-dropdown-menu__sub-list">
+            <li class="m-dropdown-menu__sub-item"><a href="#">CANADA (French)</a>
+            </li>
+            <li class="m-dropdown-menu__sub-item"><a href="#">GERMANY</a>
+            </li>
+            <li class="m-dropdown-menu__sub-item"><a href="#">HONG KONG (English)</a>
+            </li>
+            <li class="m-dropdown-menu__sub-item"><a href="#">HONG KONG (Traditional Character)</a>
+            </li>
+            <li class="m-dropdown-menu__sub-item"><a href="#">HONG KONG (Simplified Character)</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- END dropdown menu-->
+    <!-- BEGIN dropdown menu-->
+    <div class="m-dropdown-menu">
+      <div class="m-dropdown-menu__menu"><a href="#" class="m-dropdown-menu__item">OUR WINE BRANDS<i class="i-icon-arrowdown"></i></a>
+        <div class="m-dropdown-menu__sub-menu">
+          <ul class="m-dropdown-menu__sub-list">
+            <li class="m-dropdown-menu__sub-item"><a href="#">CANADA (French)</a>
+            </li>
+            <li class="m-dropdown-menu__sub-item"><a href="#">GERMANY</a>
+            </li>
+            <li class="m-dropdown-menu__sub-item"><a href="#">HONG KONG (English)</a>
+            </li>
+            <li class="m-dropdown-menu__sub-item"><a href="#">HONG KONG (Traditional Character)</a>
+            </li>
+            <li class="m-dropdown-menu__sub-item"><a href="#">HONG KONG (Simplified Character)</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- END dropdown menu-->
+    <!-- BEGIN dropdown menu-->
+    <div class="m-dropdown-menu">
+      <div class="m-dropdown-menu__menu"><a href="#" class="m-dropdown-menu__item">CORPORATE<i class="i-icon-arrowdown"></i></a>
+        <div class="m-dropdown-menu__sub-menu">
+          <ul class="m-dropdown-menu__sub-list">
+            <li class="m-dropdown-menu__sub-item"><a href="#">couple</a>
+            </li>
+            <li class="m-dropdown-menu__sub-item"><a href="#">test</a>
+            </li>
+            <li class="m-dropdown-menu__sub-item"><a href="#">items</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- END dropdown menu-->
+  </div>
+  <div class="l-footer__logos">
+    <div class="m-footer-logos">
+      <ul class="m-footer-logos__list">
+        <li class="m-footer-logos__item m-footer-logos__item--first"><img src="img/MCWILLIAMS-WORDMARK_MONO.png" alt="">
+        </li>
+        <li class="m-footer-logos__item m-footer-logos__item--second"><img src="img/AFFW_horiz_lg_BW.png" alt="">
+        </li>
+        <li class="m-footer-logos__item m-footer-logos__item--third"><img src="img/Drinkwise_logo.png" alt="">
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="l-footer__copyright">
+    <div class="m-copyright">
+      <p>New South Wales Liquor Licence: LIQP700383194. Liquor Act 2007. It is against the law to sell or supply alcohol to, or to obtain alcohol on behalf of, a person under the age of 18 years.</p>
+    </div>
+  </div>
+</footer>
+<!-- Load Scripts-->
+<script>
+  var scr = {
+    "scripts": [{
+        "src": "https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js",
+        "async": false
+      }, {
+        "src": "libs/sticky-kit/jquery.sticky-kit.min.js",
+        "async": false
+      }, {
+        "src": "js/common.js",
+        "async": false
+    }]
+  };
+  !function (t, n, r) {
+    "use strict";
+    var c = function (t) {
+      if ("[object Array]" !== Object.prototype.toString.call(t)) return !1;
+      for (var r = 0; r < t.length; r++) {
+        var c = n.createElement("script"),
+                e = t[r];
+        c.src = e.src, c.async = e.async, n.body.appendChild(c)
+      }
+      return !0
+    };
+    t.addEventListener ? t.addEventListener("load", function () {
+      c(r.scripts);
+    }, !1) : t.attachEvent ? t.attachEvent("onload", function () {
+      c(r.scripts)
+    }) : t.onload = function () {
+      c(r.scripts)
+    }
+  }(window, document, scr);
+</script>

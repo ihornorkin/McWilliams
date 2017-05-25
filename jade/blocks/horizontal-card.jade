@@ -1,0 +1,13 @@
+mixin b-horizontal-card(img, cls)
+
+  //BEGIN horizontal card
+
+  +b.m-horizontal-card(class= cls)
+    +e.image-wrapper
+      +e.IMG(src= img).image
+
+    +e.content-wrapper
+
+      block
+
+  //END horizontal card

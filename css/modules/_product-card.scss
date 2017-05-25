@@ -1,0 +1,29 @@
+.m-product-card {
+  text-align: center;
+  padding: 0 3.5rem;
+  margin-bottom: 5.2rem;
+
+  &__image-wrapper {
+    justify-content: center;
+    margin: 0 0 3.4rem;
+  }
+
+  &__img {
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  &__description-wrapper {
+    border-top: 2px solid $sandy-brown;
+  }
+
+  &__name {
+    margin-bottom: 1.5rem;
+  }
+
+  &__varietal {
+    margin-bottom: 1rem;
+    margin-top: 1.5rem;
+  }
+}

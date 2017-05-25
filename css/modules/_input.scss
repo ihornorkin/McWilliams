@@ -1,0 +1,42 @@
+.m-input-group {
+  margin-bottom: .9rem;
+  margin-top: .9rem;
+  display: table;
+
+  input {
+    display: table-cell;
+    border: 0;
+    border-radius: 0;
+    color: $black;
+    font-family: $proximanova;
+    font-size: 1.4rem;
+    line-height: 1.29;
+    letter-spacing: .02rem;
+    padding: 1.3rem 0 1.3rem 1.5rem;
+    width: 100%;
+    transition: border $animation-type-1;
+
+    &:hover {
+      border-color: $very-light-pink;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .m-btn {
+    display: table-cell;
+    background-color: $white;
+    border: none;
+    padding: 0 1.8rem;
+    width: 5.2rem;
+
+    i {
+      position: relative;
+      top: 3px;
+      color: $charcoal-grey;
+    }
+  }
+
+}

@@ -1,0 +1,25 @@
+.m-grape-leaf {
+  position: fixed;
+
+  &__leaf {
+    background-image: url('../img/grape-leaf.png');
+    height: 7.6rem;
+    left: -50%;
+    position: relative;
+    top: 0;
+    width: 7.3rem;
+    z-index: 5;
+
+    span {
+      font-family: $baskerville-sc;
+      font-size: 1.8rem;
+      line-height: 1.92;
+      letter-spacing: 0.3px;
+      color: #fefefe;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}

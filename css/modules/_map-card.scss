@@ -1,0 +1,20 @@
+.m-map-card {
+  display: flex;
+  flex-direction: column;
+  padding: 0 1.5rem;
+
+  &__descr-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+
+  h2 {
+    flex-grow: 1;
+  }
+
+  iframe {
+    height: 36rem;
+    width: 100%;
+  }
+}

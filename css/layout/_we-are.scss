@@ -1,0 +1,96 @@
+.l-we-are {
+
+  &__info {
+    border-bottom: 1px solid $sandy-brown;
+    padding-bottom: 2.5rem;
+
+    @include breakpoint(max-width $tablet) {
+      border-bottom: 0;
+      padding-bottom: 0;
+    }
+  }
+
+  &__horisontal-post {
+    @include breakpoint(max-width $tablet) {
+      text-align: center;
+    }
+
+    .m-horizontal-card {
+
+      @include breakpoint(max-width $tablet) {
+        padding-bottom: 2rem;
+      }
+
+      &__content-wrapper {
+
+        @include breakpoint(max-width $tablet) {
+          border-bottom: 0;
+        }
+      }
+    }
+  }
+
+  &__blog-post {
+    margin-bottom: 6rem;
+    padding-top: 2.5rem;
+
+    @include breakpoint(max-width $tablet) {
+      padding-top: 0;
+    }
+  }
+
+  &__posts {
+    display: flex;
+
+    @include breakpoint(max-width $tablet-down) {
+      flex-direction: column;
+    }
+
+    .m-blog-article {
+      @include span(6);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      &:first-child {
+        @include breakpoint(max-width $tablet-down) {
+          border-bottom: 1px solid $sandy-brown;
+        }
+      }
+
+      @include breakpoint(max-width $tablet-down) {
+        @include span(12);
+        margin-bottom: 0;
+        padding-bottom: 3.5rem;
+
+        &__descr-wrapper {
+          min-height: 0;
+        }
+      }
+
+      &__figure {
+        align-items: center;
+        display: flex;
+        height: 100%;
+        justify-content: center;
+        max-height: 46.5rem;
+        overflow: hidden;
+      }
+
+      &__descr-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      h1 {
+        margin: 0;
+      }
+
+      p {
+        flex-grow: 1;
+      }
+    }
+  }
+}

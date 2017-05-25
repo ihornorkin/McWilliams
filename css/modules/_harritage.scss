@@ -1,0 +1,19 @@
+.m-harritage {
+  display: block;
+  height: 50px;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+
+  @include breakpoint(max-width $tablet) {
+    position: absolute;
+  }
+
+  &__heading {
+    font-family: $baskerville-sc;
+    font-size: 1.8rem;
+    letter-spacing: .3px;
+    line-height: 50px;
+    padding-left: .8rem;
+  }
+}

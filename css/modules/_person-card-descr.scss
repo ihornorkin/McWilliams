@@ -1,0 +1,25 @@
+.m-person-card-descr {
+
+  &__name {
+    @extend h1;
+    margin-bottom: 0;
+  }
+
+  &__position {
+    color: $black;
+    font-family: $baskerville-i;
+    font-size: 2.4rem;
+    letter-spacing: .4px;
+    line-height: 1.25;
+    margin-bottom: 2.5rem;
+
+    @include breakpoint(max-width $tablet-down) {
+      font-size: 1.8rem;
+      margin-bottom: 1.9rem;
+    }
+  }
+
+  p {
+
+  }
+}

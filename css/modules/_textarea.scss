@@ -1,0 +1,18 @@
+textarea {
+    border: 2px solid $white;
+    color: $black;
+    font-family: $proximanova;
+    font-size: 1.4rem;
+    letter-spacing: .02rem;
+    line-height: 1.29;
+    padding: 1.1rem 0 1.1rem 1.5rem;
+    width: 100%;
+
+    &:hover {
+        border-color: $very-light-pink;
+    }
+    
+    &:focus {
+        outline: none;
+    }
+}

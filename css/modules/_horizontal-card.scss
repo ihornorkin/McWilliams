@@ -1,0 +1,82 @@
+.m-horizontal-card {
+  $module: &;
+  @include clearfix;
+  display: flex;
+
+  @include breakpoint(max-width $tablet) {
+    flex-direction: column;
+  }
+
+  &--bordered {
+    border-bottom: 1px solid $sandy-brown;
+
+    @include breakpoint(max-width $tablet) {
+      border-bottom: 0;
+
+      &:last-of-type {
+        border-bottom: 1px solid $sandy-brown;
+      }
+    }
+
+    &:first-of-type #{$module}__content-wrapper {
+      border-top: 1px solid $sandy-brown;
+
+      @include breakpoint(max-width $tablet) {
+        border-top: 0;
+      }
+    }
+
+    #{$module}__content-wrapper {
+      border: 0;
+    }
+  }
+
+  &__image-wrapper {
+    @include span(6);
+
+    display: flex;
+
+    @include breakpoint(max-width $tablet) {
+      @include span(12);
+    }
+
+    &.compat-object-fit {
+      background-position: 20% center;
+      background-size: cover;
+
+      #{$module}__image {
+        opacity: 0;
+      }
+    }
+  }
+
+  &__image {
+    display: block;
+    max-width: 100%;
+    object-fit: cover;
+
+    @include breakpoint(max-width $tablet) {
+      object-position: 20%;
+      width: 100%;
+    }
+
+    @include md-landscape {
+      object-position: 20%;
+      width: 100%;
+    }
+  }
+
+  &__content-wrapper {
+    @include span(6);
+
+    border-bottom: 1px solid $sandy-brown;
+    border-top: 1px solid $sandy-brown;
+    padding: 2rem 5rem;
+
+    @include breakpoint(max-width $tablet) {
+      @include span(12);
+
+      padding: 2rem;
+    }
+  }
+}

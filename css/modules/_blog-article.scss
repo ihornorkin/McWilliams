@@ -1,0 +1,42 @@
+.m-blog-article {
+  margin-bottom: 4.6rem;
+  text-align: center;
+
+  &__figure {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    width: 100%;
+  }
+
+  &__image {
+    display: block;
+    object-fit: cover;
+    max-width: 100%;
+    object-position: center;
+
+    //&--left {
+    //  object-position: left;
+    //}
+    //
+    //&--right {
+    //  object-position: right;
+    //}
+  }
+
+  &__descr-wrapper {
+    padding-top: 4.7rem;
+    min-height: 23rem;
+  }
+
+  .m-heading h1 {
+    margin-top: 0;
+  }
+
+  p {
+    margin-top: 1.3rem;
+    margin-bottom: 4rem;
+  }
+
+}

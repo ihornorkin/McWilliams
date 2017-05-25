@@ -1,0 +1,31 @@
+.m-corporate {
+
+  &__heading {
+    margin-bottom: 4rem;
+    margin-top: 4.8rem;
+    text-align: center;
+
+
+    @include breakpoint(max-width $mobile) {
+      margin-bottom: 7.5rem;
+    }
+  }
+
+  &__link-list {
+    list-style-type: none;
+    margin-bottom: 4.5rem;
+    padding: 0;
+  }
+
+  &__item {
+
+    a {
+      &::before {
+        content: '-';
+        display: inline-block;
+        padding-right: 1rem;
+      }
+    }
+  }
+
+}

@@ -1,0 +1,12 @@
+.l-featured-articles {
+
+  .m-featured-article {
+    @include span(4);
+    display: flex;
+    flex-direction: column;
+
+    @include breakpoint(max-width $tablet) {
+      @include span(12);
+    }
+  }
+}

@@ -1,0 +1,16 @@
+mixin b-featured-article(cls, img, heading, author, icon)
+
+  // BEGIN featured article
+  +b.m-featured-article(class= cls)
+    +e.image-wrapper
+      +e.IMG(src= img).image
+
+    +e.content-wrapper
+      i(class= icon)
+      +e.A(src="#").heading= heading
+      +e.A(src="#").author= author
+      +e.P.descr
+        block
+      +e.A(sec="#").link READ MORE
+
+  // END featured article

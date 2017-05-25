@@ -1,0 +1,26 @@
+.l-contact-us {
+
+  &__map-cards {
+    @include container(128rem);
+    display: flex;
+    margin-bottom: 10rem;
+    margin-top: 3.5rem;
+
+    @include breakpoint(max-width $tablet) {
+      flex-direction: column;
+      margin-bottom: 0;
+      padding: 0 2.5rem;
+    }
+
+    .m-map-card {
+      @include span(6);
+      display: flex;
+      justify-content: space-between;
+
+      @include breakpoint(max-width $tablet) {
+        @include span(12);
+        margin-bottom: 9rem;
+      }
+    }
+  }
+}

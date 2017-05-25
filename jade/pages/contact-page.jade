@@ -1,0 +1,19 @@
+include ../bemto/bemto
+include ../blocks/index
+include ../header/_header
+include ../footer/_footer
+
++header("Contact Us")
+
+  main.l-wrapper
+    +b.l-contact-us
+      +e.info
+        +b-info-section("img/contact.png", "CONTACT US", "--half-left")
+
+      +e.SECTION.form
+        +b-contact-page-form
+
+      +e.map-cards
+        +b-section-map-card
+
+  +footer()

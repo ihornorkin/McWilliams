@@ -1,0 +1,13 @@
+mixin b-product-gallery(count)
+
+  +b.l-product-gallery
+    - var items = count
+    - for (var x = 0; x < items; x++)
+
+      //BEGIN gallery item
+
+      +e.item
+        +b-product-card
+
+      //END gallery item
+

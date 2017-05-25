@@ -1,0 +1,33 @@
+.m-score-badge {
+  background: $charcoal-grey;
+  border-radius: 50%;
+  color: $sandy-brown;
+  display: block;
+  font-family: $baskerville;
+  height: 11rem;
+  min-height: 11rem;
+  min-width: 11rem;
+  position: relative;
+  width: 11rem;
+
+  &__wrapper {
+    text-align: center;
+    position: absolute;
+    top: 58%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__score {
+    font-size: 7rem;
+    margin-bottom: .7rem;
+    line-height: .54;
+    letter-spacing: 1.1px;
+  }
+
+  &__descr {
+
+  }
+}

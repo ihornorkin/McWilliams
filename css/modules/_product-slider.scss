@@ -1,0 +1,48 @@
+.m-product-slider {
+  margin-right: 4rem;
+  
+  @include breakpoint(max-width $tablet) {
+    margin: 0;
+  }
+
+  &__wrapper {
+    position: relative;
+  }
+
+  &__image {   
+    display: block;
+    height: auto;
+    margin: 0 auto;
+    max-width: 100%;
+
+    @include breakpoint(max-width $tablet) {
+      width: auto;
+    }
+  }
+
+  &__controls {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    left: 0;
+    width: 100%;
+    transform: translateY(-50%);
+
+    a {
+      color: $black;
+      position: absolute;
+    }
+
+    i {
+      font-size: 3.3rem;
+    }
+
+    .left {
+      left: 0;
+    }
+    
+    .right {
+      right: 0;
+    }
+  }
+}

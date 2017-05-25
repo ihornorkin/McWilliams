@@ -1,0 +1,46 @@
+.m-heading {
+  position: relative;
+
+  &--linear {
+    text-align: center;
+
+    h1,
+    h2 {
+      background-color: #fff;
+      display: inline-block;
+      padding: 0 3.3rem;
+      position: relative;
+      max-width: 80%;
+      margin: 0;
+      z-index: 2;
+    }
+
+    h2 {
+      @extend h1;
+    }
+
+    &::after {
+      border-bottom: solid 1px $sandy-brown;
+      content: '';
+      display: block;
+      position: absolute;
+      top: 50%;
+      right: 0;
+      left: 0;
+      transform: translateY(-50%);
+      z-index: 1;
+
+      @include breakpoint(max-width $tablet) {
+        display: none;
+      }
+    }
+  }
+
+  &--linear-100 {
+
+    h1,
+    h2 {
+      padding: 0 10rem;
+    }
+  }
+}

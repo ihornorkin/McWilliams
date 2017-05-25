@@ -1,0 +1,48 @@
+.m-btn,
+a.m-btn {
+
+  background-color: $sandy-brown;
+  border: 0;
+  border-radius: 0;
+  color: $white;
+  display: inline-block;
+  font-family: $proximanova;
+  font-size: 1.6rem;
+  letter-spacing: 0.2px;
+  line-height: 1.12;
+  padding: 1.5rem 4rem 1.2rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: background-color .3s ease-in-out;
+
+  &:hover {
+    background-color: #e3b69b;
+  }
+
+  &:active,
+  &:focus {
+    background-color: #996140;
+  }
+}
+
+.m-link-btn {
+  border-bottom: solid 1px $sandy-brown;
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  padding-top: 1.3rem;
+  padding-bottom: 1.3rem;
+  transition: border-color $animation-type-1,
+              color $animation-type-1;
+
+  &:hover {
+    border-bottom-color: #e3b69b;
+    color: #e3b69b;
+  }
+
+  &:active,
+  &:focus {
+    border-bottom-color: #996140;
+    color: #996140;
+  }
+}

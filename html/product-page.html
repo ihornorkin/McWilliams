@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name="description" content="">
+    <meta name="description" content="">
+    <title>Product page</title>
+    <!-- Grid Styles-->
+    <style></style>
+    <!-- First Sections b-navigation styles-->
+    <style></style>
+    <!-- Fonts-->
+    <!--[if lt IE 9]>
+    <script src="libs/html5shiv/dist/html5shiv.js"></script><![endif]-->
+    <!-- Load CSS, CSS Localstorage & WebFonts Main Function-->
+    <script>
+      !function (e) {
+        "use strict";
+      
+        function t(e, t, n) {
+          e.addEventListener ? e.addEventListener(t, n, !1) : e.attachEvent && e.attachEvent("on" + t, n)
+        }
+      
+        function n(t, n) {
+          return e.localStorage && localStorage[t + "_content"] && localStorage[t + "_file"] === n
+        }
+      
+        function a(t, a) {
+          if (e.localStorage && e.XMLHttpRequest) n(t, a) ? o(localStorage[t + "_content"]) : l(t, a);
+          else {
+            var s = r.createElement("link");
+            s.href = a, s.id = t, s.rel = "stylesheet", s.type = "text/css", r.getElementsByTagName("head")[0].appendChild(s), r.cookie = t
+          }
+        }
+      
+        function l(e, t) {
+          var n = new XMLHttpRequest;
+          n.open("GET", t, !0), n.onreadystatechange = function () {
+            4 === n.readyState && 200 === n.status && (o(n.responseText), localStorage[e + "_content"] = n.responseText, localStorage[e + "_file"] = t)
+          }, n.send()
+        }
+      
+        function o(e) {
+          var t = r.createElement("style");
+          t.setAttribute("type", "text/css"), r.getElementsByTagName("head")[0].appendChild(t), t.styleSheet ? t.styleSheet.cssText = e : t.innerHTML = e
+        }
+      
+        var r = e.document;
+        e.loadCSS = function (e, t, n) {
+          var a, l = r.createElement("link");
+          if (t) a = t;
+          else {
+            var o;
+            o = r.querySelectorAll ? r.querySelectorAll("style,link[rel=stylesheet],script") : (r.body || r.getElementsByTagName("head")[0]).childNodes, a = o[o.length - 1]
+          }
+          var s = r.styleSheets;
+          l.rel = "stylesheet", l.href = e, l.media = "only x", a.parentNode.insertBefore(l, t ? a : a.nextSibling);
+          var c = function (e) {
+            for (var t = l.href, n = s.length; n--;)
+              if (s[n].href === t) return e();
+            setTimeout(function () {
+              c(e)
+            })
+          };
+          return l.onloadcssdefined = c, c(function () {
+            l.media = n || "all"
+          }), l
+        }, e.loadLocalStorageCSS = function (l, o) {
+          n(l, o) || r.cookie.indexOf(l) > -1 ? a(l, o) : t(e, "load", function () {
+            a(l, o)
+          })
+        }
+      }(this);
+      
+    </script>
+    <!-- Load CSS Start-->
+    <!-- script.loadCSS( "/css/header.min.css", false, "all" );
+    -->
+    <script>
+      loadCSS("libs/normalize-css/normalize.css", false, "all");
+      loadCSS("css/styles.min.css", false, "all");
+    </script>
+    <!-- Load CSS End-->
+    <!-- Load CSS Compilled without JS-->
+    <noscript>
+      <link rel="stylesheet" href="libs/normalize-css/normalize.css">
+      <link rel="stylesheet" href="css/styles.min.css">
+      
+    </noscript>
+  </head>
+  <body>
+    <header class="l-header">
+      <div class="l-header__logo"><a href="index.html"><img src="img/logo.svg" alt="logo" class="l-header__logo-svg" title=""/></a>
+      </div>
+      <div class="l-header__menu-wrapper">
+        <div class="l-header__utills">
+          <div class="m-header-utils">
+            <ul class="m-header-utils__list">
+              <li class="m-header-utils__item"><a href="#">JOIN OUR MAILING LIST<i class="i-icon-mail"></i></a>
+              </li>
+              <li class="m-header-utils__item"><a href="#">SHOP WINES<i class="i-icon-arrowright"></i></a>
+              </li>
+              <li class="m-header-utils__item"><a href="#">SEARCH<i class="i-icon-search"></i></a>
+              </li>
+              <li class="m-header-utils__item">
+                <!-- BEGIN search form-->
+                <form action="" class="m-search-from">
+                  <div class="m-search-from__input-wrapper"><input type="text" id="search" placeholder="SEARCH" class="m-search-from__input"/><i class="i-icon-search"></i>
+                  </div>
+                </form>
+                <!-- END search form-->
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="l-header__menu">
+          <nav class="m-menu">
+            <ul class="m-menu__list">
+              <!--MENU ITEM-->
+              <li class="menu-item"><a href="all-products.html">OUR WINE</a></li>
+              <!--MENU ITEM-->
+              <li class="menu-item"><a href="we-are.html">WE ARE McWILLIAM’S</a>
+                <!--SUB menu-->
+                <ul class="sub-menu">
+                  <li class="menu-item"><a href="#">OUR HISTORY &amp; HERITAGE</a></li>
+                  <li class="menu-item"><a href="#">McWILLIAM’S FAMILY</a></li>
+                  <li class="menu-item"><a href="#">OUR WINEMAKERS</a></li>
+                  <li class="menu-item"><a href="#">AUSTRALIA’S FIRST FAMILIES OF WINE</a></li>
+                </ul>
+              </li>
+              <!--MENU ITEM-->
+              <li class="menu-item"><a href="we-are.html">OUR BACKYARD</a>
+                <!--SUB menu-->
+                <ul class="sub-menu">
+                  <li class="menu-item"><a href="#">RIVERINA</a></li>
+                  <li class="menu-item"><a href="#">HILLTOPS</a></li>
+                  <li class="menu-item"><a href="#">ORANGE</a></li>
+                  <li class="menu-item"><a href="#">TUMBARUMBA</a></li>
+                  <li class="menu-item"><a href="#">CANBERRA</a></li>
+                  <li class="menu-item"><a href="#">VISIT THE RIVERINA</a></li>
+                </ul>
+              </li>
+              <!--MENU ITEM-->
+              <li class="menu-item"><a href="community.html">OUR COMMUNITY</a></li>
+              <!--MENU ITEM-->
+              <li class="menu-item"><a href="contact-page.html">CONTACT</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="l-header__mobile-menu">
+        <div class="hamburger hamburger--spring js-hamburger">
+          <div class="hamburger-box">
+            <div class="hamburger-inner"></div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="l-wrapper">
+      <div class="l-product-page-product">
+        <!--+e.img-->
+        <!--  +b-product-img-slider-->
+        <div class="l-product-page-product__description">
+          <!--BEGIN product description-->
+          <div class="m-product-description">
+            <div class="m-product-description__top-descr">
+              <h1 class="m-product-description__heading">McWILLIAM’S 1877 SHIRAZ
+              </h1>
+              <p class="m-product-description__main-descr lg">This prestigious wine takes its name, "1877", from the year 1st generation winemaker, Samuel McWilliam, planted the winery's first vines in Corowa NSW and McWilliam's Wines was born. Crafted from vigorously selected, high quality fruit from mature, low yielding vines, the 2014 vintage of McWilliam's "1877" is a Shiraz from some of the best vines in the Hilltops region of NSW.
+              </p>
+              <button class="m-btn">BUY NOW</button>
+            </div>
+            <div class="m-product-description__slider">
+              <!--BEGIN product slider-->
+              <div class="m-product-img-slider">
+                <div class="m-product-img-slider__thumbs-wrapper">
+                  <div class="m-product-img-slider__thumbs"><img src="img/product-thumb.png"/>
+                    <!--img(src="img/product-thumb.png")-->
+                    <!--img(src="img/product-thumb.png")-->
+                  </div>
+                </div>
+                <div class="m-product-img-slider__slider">
+                  <!--BEGIN product slider-->
+                  <div class="m-product-slider">
+                    <div class="m-product-slider__wrapper"><img src="img/product-img.png" class="m-product-slider__image" alt="" role="presentation"/>
+                      <div class="m-product-slider__controls"><a href="#" class="left"><i class="i-icon-arrowleft"></i></a><a href="#" class="right"><i class="i-icon-arrowright"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                  <!--END product slider-->
+                </div>
+              </div>
+              <!--END product slider-->
+            </div>
+            <div class="m-product-description__bottom-descr">
+              <ul class="m-product-description__info-list">
+                <li>VARIETAL : Shiraz</li>
+                <li>COLOUR : Vibrant red purple.</li>
+                <li>ALC/VOL: 12.5%</li>
+              </ul>
+              <div class="m-product-description__years">
+                <p>YEARS:</p>
+                <ul>
+                  <li class="active">2014</li>
+                  <li>2016</li>
+                </ul>
+              </div>
+              <p class="m-product-description__secondary-descr lg">An excellent vintage with warm days and cool nights. Spring frosts wiped out blocks on lower sites with poor cold air drainage. This resulted in a lower regional crush but quality was high due to it only being from the most suitable sites. A hot and dry growing season resulted in balanced canopies with low yields and concentrated fruit. Some rainfall occurred during February & March which was a positive as it refreshed the vines and gave them sufficient water to get through to harvest with minimal stress. There was no disease pressure due to the great canopies and low yields.
+              </p>
+            </div>
+            <!--END product description-->
+          </div>
+        </div>
+      </div>
+      <!-- BEGIN product info-->
+      <section class="l-product-secondary-info m-product-secondary-info">
+        <div class="l-product-secondary-info__location">
+          <div>
+            <h2>REGION</h2>
+            <p class="lg text-up">TUMBARUMBA</p>
+          </div><span class="i-icon-tumbarumba-white"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></span>
+        </div>
+        <div class="l-product-secondary-info__aroma">
+          <h2>AROMA</h2>
+          <p class="lg">Bright fruits of dark cherry, pepper and charcuturie coupled with lifted florals and fresh toasty oak.</p>
+        </div>
+        <div class="l-product-secondary-info__palette">
+          <h2>PALETTE</h2>
+          <p>Bright fruits of dark cherry, pepper and charcuturie coupled with lifted florals and fresh toasty oak.</p>
+        </div>
+        <!-- END product info-->
+      </section>
+      <div class="l-product-page-review">
+        <div class="l-product-page-review__heading">
+          <h2>PROFESSIONAL REVIEWS</h2>
+        </div>
+        <div class="l-product-page-review__cards">
+          <!-- BEGIN review card-->
+          <div class="m-review-card">
+            <div class="m-review-card__heading-wrapper">
+              <!-- BEGIN score badge--><span class="m-score-badge"><span class="m-score-badge__wrapper"><span class="m-score-badge__score">96</span><span class="m-score-badge__descr">POINTS</span></span></span>
+              <!-- END score badge-->
+              <div class="m-review-card__info-wrapper">
+                <div class="m-review-card__name">JAMES HALLIDAY
+                </div>
+                <div class="m-review-card__company">Wine Companion 2017
+                </div>
+              </div>
+            </div>
+            <div class="m-review-card__description">
+              <p class="lg">The icon wine of the large vineyard in the Hilltops. Elegant and medium-bodied, it's freshness and vibrant red and black fruits are couched in quality oak and finely detailed tannins. Its balance means it can be enjoyed young, matured or aged.</p>
+            </div>
+          </div>
+          <!-- END review card-->
+          <!-- BEGIN review card-->
+          <div class="m-review-card">
+            <div class="m-review-card__heading-wrapper">
+              <!-- BEGIN score badge--><span class="m-score-badge"><span class="m-score-badge__wrapper"><span class="m-score-badge__score">96</span><span class="m-score-badge__descr">POINTS</span></span></span>
+              <!-- END score badge-->
+              <div class="m-review-card__info-wrapper">
+                <div class="m-review-card__name">JAMES HALLIDAY
+                </div>
+                <div class="m-review-card__company">Wine Companion 2017
+                </div>
+              </div>
+            </div>
+            <div class="m-review-card__description">
+              <p class="lg">The icon wine of the large vineyard in the Hilltops. Elegant and medium-bodied, it's freshness and vibrant red and black fruits are couched in quality oak and finely detailed tannins. Its balance means it can be enjoyed young, matured or aged.</p>
+            </div>
+          </div>
+          <!-- END review card-->
+          <!-- BEGIN review card-->
+          <div class="m-review-card">
+            <div class="m-review-card__heading-wrapper">
+              <!-- BEGIN score badge--><span class="m-score-badge"><span class="m-score-badge__wrapper"><span class="m-score-badge__score">96</span><span class="m-score-badge__descr">POINTS</span></span></span>
+              <!-- END score badge-->
+              <div class="m-review-card__info-wrapper">
+                <div class="m-review-card__name">JAMES HALLIDAY
+                </div>
+                <div class="m-review-card__company">Wine Companion 2017
+                </div>
+              </div>
+            </div>
+            <div class="m-review-card__description">
+              <p class="lg">The icon wine of the large vineyard in the Hilltops. Elegant and medium-bodied, it's freshness and vibrant red and black fruits are couched in quality oak and finely detailed tannins. Its balance means it can be enjoyed young, matured or aged.</p>
+            </div>
+          </div>
+          <!-- END review card-->
+        </div>
+      </div>
+      <!--BEGIN section product page posts-->
+      <div class="l-product-blog-posts">
+        <div class="l-product-blog-posts__item">
+          <!--BEGIN product post card-->
+          <div class="m-product-post-card">
+            <figure class="m-product-post-card__img-wrapper"><img src="img/winemakers.png" class="m-product-post-card__img" alt="" role="presentation"/>
+            </figure>
+            <div class="m-product-post-card__description">
+              <h2>MEET THE WINEMAKERS</h2><a src="#" class="m-btn">LEARN MORE</a>
+            </div>
+          </div>
+          <!--END product post card-->
+        </div>
+        <div class="l-product-blog-posts__item">
+          <!--BEGIN product post card-->
+          <div class="m-product-post-card">
+            <figure class="m-product-post-card__img-wrapper"><img src="img/region-half.png" class="m-product-post-card__img" alt="" role="presentation"/>
+            </figure>
+            <div class="m-product-post-card__description">
+              <h2>EXPLORE THE TUMBARUMBA REGION</h2><a src="#" class="m-btn">LEARN MORE</a>
+            </div>
+          </div>
+          <!--END product post card-->
+        </div>
+      </div>
+      <!--END section product page posts-->
+      <div class="l-product-page-gallery">
+        <div class="l-product-page-gallery__heading">
+          <div class="m-heading m-heading--linear m-heading--linear-100">
+            <h2>DISCOVER MORE OF OUR FLAGSHIP RANGE</h2>
+          </div>
+        </div>
+        <div class="l-product-page-gallery__gallery">
+          <div class="l-product-gallery">
+            <!--BEGIN gallery item-->
+            <div class="l-product-gallery__item">
+              <div class="m-product-card">
+                <figure class="m-product-card__image-wrapper"><img src="img/product-img.png" class="m-product-card__img" alt="" role="presentation"/>
+                </figure>
+                <div class="m-product-card__description-wrapper">
+                  <h2 class="m-product-card__name">PRODUCT NAME
+                  </h2>
+                  <p class="m-product-card__varietal">VARIETAL
+                  </p><a class="m-link-btn">LEARN MORE</a>
+                </div>
+              </div>
+            </div>
+            <!--END gallery item-->
+            <!--BEGIN gallery item-->
+            <div class="l-product-gallery__item">
+              <div class="m-product-card">
+                <figure class="m-product-card__image-wrapper"><img src="img/product-img.png" class="m-product-card__img" alt="" role="presentation"/>
+                </figure>
+                <div class="m-product-card__description-wrapper">
+                  <h2 class="m-product-card__name">PRODUCT NAME
+                  </h2>
+                  <p class="m-product-card__varietal">VARIETAL
+                  </p><a class="m-link-btn">LEARN MORE</a>
+                </div>
+              </div>
+            </div>
+            <!--END gallery item-->
+            <!--BEGIN gallery item-->
+            <div class="l-product-gallery__item">
+              <div class="m-product-card">
+                <figure class="m-product-card__image-wrapper"><img src="img/product-img.png" class="m-product-card__img" alt="" role="presentation"/>
+                </figure>
+                <div class="m-product-card__description-wrapper">
+                  <h2 class="m-product-card__name">PRODUCT NAME
+                  </h2>
+                  <p class="m-product-card__varietal">VARIETAL
+                  </p><a class="m-link-btn">LEARN MORE</a>
+                </div>
+              </div>
+            </div>
+            <!--END gallery item-->
+            <!--BEGIN gallery item-->
+            <div class="l-product-gallery__item">
+              <div class="m-product-card">
+                <figure class="m-product-card__image-wrapper"><img src="img/product-img.png" class="m-product-card__img" alt="" role="presentation"/>
+                </figure>
+                <div class="m-product-card__description-wrapper">
+                  <h2 class="m-product-card__name">PRODUCT NAME
+                  </h2>
+                  <p class="m-product-card__varietal">VARIETAL
+                  </p><a class="m-link-btn">LEARN MORE</a>
+                </div>
+              </div>
+            </div>
+            <!--END gallery item-->
+          </div>
+        </div>
+        <div class="l-product-page-gallery__btn-wrapper">
+          <button class="m-btn">EXPLORE THE RANGE</button>
+        </div>
+      </div>
+    </main>
+    <footer class="l-footer">
+      <!--BEGIN contact form-->
+      <section class="l-contact-form">
+        <div class="l-contact-form__description">
+          <h2>BECOME PART OF THE McWILLIAM’S COMMUNITY.</h2>
+          <p>Join our mailing list for our latest news, offers and events.</p>
+        </div>
+        <div class="l-contact-form__form">
+          <form action="" class="m-contact-form">
+            <div class="m-input-group"><input type="text" placeholder="Name" class="m-contact-form__input"/>
+            </div>
+            <div class="m-input-group"><input type="text" placeholder="e-mail" class="m-contact-form__input"/>
+            </div>
+            <button class="m-btn">SIGN UP</button>
+          </form>
+        </div>
+      </section>
+      <!--END contact form-->
+      <div class="l-footer__socail">
+        <div class="m-footer-logo-list">
+          <div class="m-footer-logo-list__list">
+            <div class="m-footer-logo-list__item"><a href="#"><i class="i-icon-facebook"></i></a>
+            </div>
+            <div class="m-footer-logo-list__item"><a href="#"><i class="i-icon-instagram"></i></a>
+            </div>
+            <div class="m-footer-logo-list__item"><a href="#"><i class="i-icon-twitter"></i></a>
+            </div>
+            <div class="m-footer-logo-list__item"><a href="#"><i class="i-youtube"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="l-footer__privacy">
+        <div class="m-privacy-list">
+          <div class="m-privacy-list__list">
+            <div class="m-privacy-list__item"><a hre="#">CONTACT US</a>
+            </div>
+            <div class="m-privacy-list__item"><a hre="#">TERMS &amp; CONDITIONS</a>
+            </div>
+            <div class="m-privacy-list__item"><a hre="#">PRIVACY POLICY</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="l-footer__menu">
+        <!-- BEGIN dropdown menu-->
+        <div class="m-dropdown-menu">
+          <div class="m-dropdown-menu__menu"><a href="#" class="m-dropdown-menu__item">INTERNATIONAL WEBSITES<i class="i-icon-arrowdown"></i></a>
+            <div class="m-dropdown-menu__sub-menu">
+              <ul class="m-dropdown-menu__sub-list">
+                <li class="m-dropdown-menu__sub-item"><a href="#">CANADA (French)</a>
+                </li>
+                <li class="m-dropdown-menu__sub-item"><a href="#">GERMANY</a>
+                </li>
+                <li class="m-dropdown-menu__sub-item"><a href="#">HONG KONG (English)</a>
+                </li>
+                <li class="m-dropdown-menu__sub-item"><a href="#">HONG KONG (Traditional Character)</a>
+                </li>
+                <li class="m-dropdown-menu__sub-item"><a href="#">HONG KONG (Simplified Character)</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- END dropdown menu-->
+        <!-- BEGIN dropdown menu-->
+        <div class="m-dropdown-menu">
+          <div class="m-dropdown-menu__menu"><a href="#" class="m-dropdown-menu__item">OUR WINE BRANDS<i class="i-icon-arrowdown"></i></a>
+            <div class="m-dropdown-menu__sub-menu">
+              <ul class="m-dropdown-menu__sub-list">
+                <li class="m-dropdown-menu__sub-item"><a href="#">CANADA (French)</a>
+                </li>
+                <li class="m-dropdown-menu__sub-item"><a href="#">GERMANY</a>
+                </li>
+                <li class="m-dropdown-menu__sub-item"><a href="#">HONG KONG (English)</a>
+                </li>
+                <li class="m-dropdown-menu__sub-item"><a href="#">HONG KONG (Traditional Character)</a>
+                </li>
+                <li class="m-dropdown-menu__sub-item"><a href="#">HONG KONG (Simplified Character)</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- END dropdown menu-->
+        <!-- BEGIN dropdown menu-->
+        <div class="m-dropdown-menu">
+          <div class="m-dropdown-menu__menu"><a href="#" class="m-dropdown-menu__item">CORPORATE<i class="i-icon-arrowdown"></i></a>
+            <div class="m-dropdown-menu__sub-menu">
+              <ul class="m-dropdown-menu__sub-list">
+                <li class="m-dropdown-menu__sub-item"><a href="#">couple</a>
+                </li>
+                <li class="m-dropdown-menu__sub-item"><a href="#">test</a>
+                </li>
+                <li class="m-dropdown-menu__sub-item"><a href="#">items</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- END dropdown menu-->
+      </div>
+      <div class="l-footer__logos">
+        <div class="m-footer-logos">
+          <ul class="m-footer-logos__list">
+            <li class="m-footer-logos__item m-footer-logos__item--first"><img src="img/MCWILLIAMS-WORDMARK_MONO.png" alt="">
+            </li>
+            <li class="m-footer-logos__item m-footer-logos__item--second"><img src="img/AFFW_horiz_lg_BW.png" alt="">
+            </li>
+            <li class="m-footer-logos__item m-footer-logos__item--third"><img src="img/Drinkwise_logo.png" alt="">
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="l-footer__copyright">
+        <div class="m-copyright">
+          <p>New South Wales Liquor Licence: LIQP700383194. Liquor Act 2007. It is against the law to sell or supply alcohol to, or to obtain alcohol on behalf of, a person under the age of 18 years.</p>
+        </div>
+      </div>
+    </footer>
+    <!-- Load Scripts-->
+    <script>
+      var scr = {
+        "scripts": [{
+            "src": "https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js",
+            "async": false
+          }, {
+            "src": "libs/sticky-kit/jquery.sticky-kit.min.js",
+            "async": false
+          }, {
+            "src": "js/common.js",
+            "async": false
+        }]
+      };
+      !function (t, n, r) {
+        "use strict";
+        var c = function (t) {
+          if ("[object Array]" !== Object.prototype.toString.call(t)) return !1;
+          for (var r = 0; r < t.length; r++) {
+            var c = n.createElement("script"),
+                    e = t[r];
+            c.src = e.src, c.async = e.async, n.body.appendChild(c)
+          }
+          return !0
+        };
+        t.addEventListener ? t.addEventListener("load", function () {
+          c(r.scripts);
+        }, !1) : t.attachEvent ? t.attachEvent("onload", function () {
+          c(r.scripts)
+        }) : t.onload = function () {
+          c(r.scripts)
+        }
+      }(window, document, scr);
+    </script>
+  </body>
+</html>

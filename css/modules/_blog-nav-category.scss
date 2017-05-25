@@ -1,0 +1,64 @@
+.m-blog-nav-category {
+  background-color: $charcoal-grey;
+  min-height: 10rem;
+
+  &__list {
+    @include container(96rem);
+    align-items: stretch;
+    color: $white;
+    display: flex;
+    justify-content: space-between;
+    min-height: 10rem;
+    padding: 0 2.5rem;
+
+    @include breakpoint(max-width $tablet) {
+      padding: 0;
+    }
+  }
+
+  &__item {
+    align-items: center;
+    color: $white;
+    display: flex;
+    font-size: 1.8rem;
+    letter-spacing: .3px;
+    line-height: 1.22;
+    transition: $animation-type-1;
+
+    @include breakpoint(max-width $tablet) {
+      font-size: 1.6rem;
+      width: 20%;
+    }
+
+    span {
+      margin-left: 1rem;
+
+      @include breakpoint(max-width $tablet) {
+        margin-left: 0;
+        margin-top: 1rem;
+      }
+    }
+
+    i {
+      font-size: 3.6rem;
+    }
+
+    &:hover {
+      color: $sandy-brown;
+    }
+
+    @include breakpoint(max-width $tablet) {
+      align-items: center;
+      flex-direction: column;
+      flex-grow: 1;
+      justify-content: center;
+      padding: 1.6rem 0;
+      text-align: center;
+
+      &:hover {
+        background-color: rgba($silver, .6);
+        color: $white;
+      }
+    }
+  }
+}

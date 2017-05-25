@@ -1,0 +1,13 @@
+mixin b-product-post-card(img, content)
+
+  //BEGIN product post card
+
+  +b.m-product-post-card
+    +e.FIGURE.img-wrapper
+      +e.IMG(src= img).img
+
+    +e.description
+      h2= content
+      a(src="#").m-btn LEARN MORE
+
+  //END product post card

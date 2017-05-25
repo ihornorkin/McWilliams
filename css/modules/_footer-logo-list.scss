@@ -1,0 +1,42 @@
+.m-footer-logo-list {
+  height: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__list {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__item {
+    margin-right: 2rem;
+    margin-left: 2rem;
+
+    &:first-child {
+
+      i {
+        font-size: 3.65rem;
+      }
+    }
+
+    &:last-child {
+      i {
+        font-size: 4.1rem;
+      }
+    }
+
+    a {
+      color: $eclipse;
+
+      &:hover {
+        color: $pancho;
+      }
+    }
+
+    i {
+      font-size: 4.3rem;
+    }
+  }
+}

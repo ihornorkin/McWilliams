@@ -1,0 +1,57 @@
+.l-our-backyard {
+
+  .m-info-section {
+    border-bottom: 1px solid $sandy-brown;
+
+    img {
+      @include breakpoint(max-width $tablet) {
+        object-position: 90%;
+      }
+    }
+  }
+
+  &__cards {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 7.5rem 0;
+
+    @include breakpoint(max-width 960px) {
+      justify-content: center;
+    }
+
+    @include breakpoint(max-width $tablet) {
+      margin: 4.5rem 0;
+    }
+
+    .m-backyard-card {
+      margin-bottom: 2.5rem;
+      width: 20%;
+
+      @include breakpoint(max-width 960px) {
+        width: auto;
+        flex-basis: 15rem;
+      }
+
+      @include breakpoint(max-width $tablet) {
+        width: auto;
+        flex-basis: 100%;
+      }
+    }
+  }
+
+  &__riverina {
+    margin-bottom: 3.2rem;
+
+    .m-blog-article {
+      margin-bottom: 3rem;
+
+      @include breakpoint(max-width $tablet) {
+        margin-bottom: 0;
+      }
+    }
+    .m-blog-article__descr-wrapper {
+      min-height: 0;
+    }
+  }
+}
+

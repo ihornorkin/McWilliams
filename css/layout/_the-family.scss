@@ -1,0 +1,61 @@
+.l-the-family {
+
+  @include breakpoint(max-width $tablet-down) {
+    img {
+      max-height: 40rem;
+      width: 100%;
+    }
+  }
+
+  &__info {
+    @include breakpoint(max-width $tablet-down) {
+      border-bottom: 1px solid $sandy-brown;
+    }
+  }
+
+  &__heading {
+    margin: 5rem 0;
+
+    p {
+      @extend p.lg;
+      text-align: center;
+
+      @include breakpoint(max-width $mobile) {
+        padding: 0 4rem;
+
+        br {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__group-photo {
+    margin-bottom: 3rem;
+
+    @include breakpoint(max-width $tablet) {
+      display: none;
+    }
+
+    img {
+      display: block;
+    }
+
+    p {
+      margin: 0;
+      padding: 2.7rem 0;
+    }
+  }
+
+  &__legacy {
+    margin-bottom: 3.5rem;
+
+    @include breakpoint(max-width $tablet) {
+      border-bottom: 0;
+
+      .m-horizontal-card:last-of-type {
+        border-bottom: 0;
+      }
+    }
+  }
+}

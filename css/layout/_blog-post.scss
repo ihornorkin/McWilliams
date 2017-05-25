@@ -1,0 +1,26 @@
+.l-blog-post {
+
+  &__wrapper {
+    @include container(127rem);
+  }
+
+  &__post {
+    @include span(8);
+    padding: 0 2.5rem;
+
+    @include breakpoint(max-width $tablet) {
+      @include span(12);
+      padding: 0 .3rem;
+    }
+  }
+
+  &__aside {
+    @include span(4);
+    margin-top: 6.5rem;
+    padding-left: 5.5rem;
+
+    @include breakpoint(max-width $tablet) {
+      display: none;
+    }
+  }
+}

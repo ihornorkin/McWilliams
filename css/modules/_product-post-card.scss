@@ -1,0 +1,31 @@
+.m-product-post-card {
+  display: flex;
+  flex-direction: column;
+
+  &__img-wrapper {
+    margin: 0;
+  }
+
+  &__img {
+    display: block;
+    object-fit: cover;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  &__description {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: 0 2.5rem;
+    text-align: center;
+
+    h2 {
+      @extend h1;
+      margin-top: 4.4rem;
+      margin-bottom: 2.8rem;
+      flex-grow: 1;
+    }
+  }
+}

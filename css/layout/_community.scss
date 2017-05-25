@@ -1,0 +1,32 @@
+.l-community {
+
+  &__image {
+    img {
+      display: block;
+      height: 32.5rem;
+      object-fit: cover;
+    }
+
+    .m-info-section__wrapper {
+      display: none;
+
+      @include breakpoint(max-width $tablet) {
+        display: block;
+      }
+    }
+  }
+
+  &__posts {
+    @include clearfix;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 4.1rem;
+
+    .m-featured-article {
+
+      &:nth-child(4n+ 4) {
+        border-right: 0;
+      }
+    }
+  }
+}

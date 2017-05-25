@@ -1,0 +1,54 @@
+.l-footer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  &__social {
+
+  }
+
+  &__privacy {
+    margin-bottom: 2.2rem;
+  }
+
+  &__menu {
+    margin-bottom: 2.9rem;
+    text-align: center;
+
+    @include breakpoint(max-width $tablet) {
+      display: flex;
+      justify-content: space-around;
+      position: relative;
+    }
+
+    .m-dropdown-menu {
+      margin-left: 3.5rem;
+      margin-right: 3.5rem;
+
+      @include breakpoint(max-width $tablet) {
+        @include span(4);
+        border: 1px solid #c1c1c1;
+        display: flex;
+        flex-grow: 1;
+        justify-content: center;
+        margin: 0;
+        min-height: 7rem;
+        position: static;
+      }
+    }
+
+    .m-dropdown-menu__item i {
+      @include breakpoint(max-width $tablet) {
+        display: none;
+      }
+    }
+  }
+
+  &__logos {
+    margin-bottom: 2.1rem;
+  }
+
+  &__copyrigth {
+    margin-bottom: 3.5rem;
+  }
+}

@@ -1,0 +1,27 @@
+include ../bemto/bemto
+include ../blocks/index
+include ../header/_header
+include ../footer/_footer
+
++header("Blog post")
+
+  main.l-wrapper
+    +b.l-single-post
+
+      //BEGIN info
+      +e.info
+        +b-info-section("img/bolgpostheader.png", "ARTICLE TITLE", "m-info-section--half")
+          p.lg by Author Name, 28 February 2017
+      //END info
+
+      //BEGIN post
+      +e.post
+        +b-section-blog-post
+      //END post
+
+      //BEGIN featured posts
+      +e.featured-posts
+        +b-section-blog-featured
+      //END featured posts
+
+  +footer()

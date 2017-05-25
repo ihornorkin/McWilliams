@@ -1,0 +1,13 @@
+mixin  b-tag-list(count)
+
+  +b.m-tag-list
+    +e.heading BLOG TAGS
+
+    +e.UL.list
+      - var items = count
+      - for (var x = 0; x < items; x++)
+        li
+          a(src="#") TAG
+
+
+

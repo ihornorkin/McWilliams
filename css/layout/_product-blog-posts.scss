@@ -1,0 +1,14 @@
+.l-product-blog-posts {
+  @include container();
+  display: flex;
+  margin-bottom: 9.5rem;
+
+  @include breakpoint(max-width $tablet) {
+    margin-bottom: 13rem;
+  }
+
+  &__item {
+    @include span(6);
+    display: flex;
+  }
+}

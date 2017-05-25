@@ -1,0 +1,47 @@
+// -------------------------------------------------------
+// Variables
+// -------------------------------------------------------
+
+//*************************
+// Colors
+//*************************
+
+$black: #000;
+$black-two: #030303;
+$charcoal-grey: #334048;
+$navy-blue: $charcoal-grey;
+$sandy-brown: #c58b68;
+$very-light-pink: #fffefe;
+$white: #fff;
+$eclipse: #3d3d3d;
+$pancho: #e3b69b;
+$silver: #e5e6e6;
+
+
+//*************************
+// Fonts
+//*************************
+
+$baskerville: 'Baskerville-Normal', serif;
+$baskerville-sc: 'Baskerville-SC', serif;
+$baskerville-i: 'Baskerville-Italic', serif;
+$proximanova: 'Proximanova-Regular', sans-serif;
+$trenda: 'Trenda-Bold', sans-serif;
+$trenda-one: 'TrendSans-One', sans-serif;
+$icon-font: 'McW-icon-font';
+
+
+//*************************
+// Media
+//*************************
+
+$tablet: 768px;
+$tablet-down: $tablet - 1;
+$mobile: 480px;
+$lg: 1170px;
+
+//*************************
+// Animation
+//*************************
+
+$animation-type-1: .3s ease;

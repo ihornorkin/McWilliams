@@ -1,0 +1,13 @@
+.m-we-are-card-descr {
+
+  &__heading {
+    @extend h1;
+
+    margin-bottom: 0;
+  }
+
+  p:last-of-type {
+    margin-bottom: 4.5rem;
+  }
+
+}

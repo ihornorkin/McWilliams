@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name="description" content="">
+    <meta name="description" content="">
+    <title>The Family</title>
+    <!-- Grid Styles-->
+    <style></style>
+    <!-- First Sections b-navigation styles-->
+    <style></style>
+    <!-- Fonts-->
+    <!--[if lt IE 9]>
+    <script src="libs/html5shiv/dist/html5shiv.js"></script><![endif]-->
+    <!-- Load CSS, CSS Localstorage & WebFonts Main Function-->
+    <script>
+      !function (e) {
+        "use strict";
+      
+        function t(e, t, n) {
+          e.addEventListener ? e.addEventListener(t, n, !1) : e.attachEvent && e.attachEvent("on" + t, n)
+        }
+      
+        function n(t, n) {
+          return e.localStorage && localStorage[t + "_content"] && localStorage[t + "_file"] === n
+        }
+      
+        function a(t, a) {
+          if (e.localStorage && e.XMLHttpRequest) n(t, a) ? o(localStorage[t + "_content"]) : l(t, a);
+          else {
+            var s = r.createElement("link");
+            s.href = a, s.id = t, s.rel = "stylesheet", s.type = "text/css", r.getElementsByTagName("head")[0].appendChild(s), r.cookie = t
+          }
+        }
+      
+        function l(e, t) {
+          var n = new XMLHttpRequest;
+          n.open("GET", t, !0), n.onreadystatechange = function () {
+            4 === n.readyState && 200 === n.status && (o(n.responseText), localStorage[e + "_content"] = n.responseText, localStorage[e + "_file"] = t)
+          }, n.send()
+        }
+      
+        function o(e) {
+          var t = r.createElement("style");
+          t.setAttribute("type", "text/css"), r.getElementsByTagName("head")[0].appendChild(t), t.styleSheet ? t.styleSheet.cssText = e : t.innerHTML = e
+        }
+      
+        var r = e.document;
+        e.loadCSS = function (e, t, n) {
+          var a, l = r.createElement("link");
+          if (t) a = t;
+          else {
+            var o;
+            o = r.querySelectorAll ? r.querySelectorAll("style,link[rel=stylesheet],script") : (r.body || r.getElementsByTagName("head")[0]).childNodes, a = o[o.length - 1]
+          }
+          var s = r.styleSheets;
+          l.rel = "stylesheet", l.href = e, l.media = "only x", a.parentNode.insertBefore(l, t ? a : a.nextSibling);
+          var c = function (e) {
+            for (var t = l.href, n = s.length; n--;)
+              if (s[n].href === t) return e();
+            setTimeout(function () {
+              c(e)
+            })
+          };
+          return l.onloadcssdefined = c, c(function () {
+            l.media = n || "all"
+          }), l
+        }, e.loadLocalStorageCSS = function (l, o) {
+          n(l, o) || r.cookie.indexOf(l) > -1 ? a(l, o) : t(e, "load", function () {
+            a(l, o)
+          })
+        }
+      }(this);
+      
+    </script>
+    <!-- Load CSS Start-->
+    <!-- script.loadCSS( "/css/header.min.css", false, "all" );
+    -->
+    <script>
+      loadCSS("libs/normalize-css/normalize.css", false, "all");
+      loadCSS("css/styles.min.css", false, "all");
+    </script>
+    <!-- Load CSS End-->
+    <!-- Load CSS Compilled without JS-->
+    <noscript>
+      <link rel="stylesheet" href="libs/normalize-css/normalize.css">
+      <link rel="stylesheet" href="css/styles.min.css">
+      
+    </noscript>
+  </head>
+  <body>
+    <header class="l-header">
+      <div class="l-header__logo"><a href="index.html"><img src="img/logo.svg" alt="logo" class="l-header__logo-svg" title=""/></a>
+      </div>
+      <div class="l-header__menu-wrapper">
+        <div class="l-header__utills">
+          <div class="m-header-utils">
+            <ul class="m-header-utils__list">
+              <li class="m-header-utils__item"><a href="#">JOIN OUR MAILING LIST<i class="i-icon-mail"></i></a>
+              </li>
+              <li class="m-header-utils__item"><a href="#">SHOP WINES<i class="i-icon-arrowright"></i></a>
+              </li>
+              <li class="m-header-utils__item"><a href="#">SEARCH<i class="i-icon-search"></i></a>
+              </li>
+              <li class="m-header-utils__item">
+                <!-- BEGIN search form-->
+                <form action="" class="m-search-from">
+                  <div class="m-search-from__input-wrapper"><input type="text" id="search" placeholder="SEARCH" class="m-search-from__input"/><i class="i-icon-search"></i>
+                  </div>
+                </form>
+                <!-- END search form-->
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="l-header__menu">
+          <nav class="m-menu">
+            <ul class="m-menu__list">
+              <!--MENU ITEM-->
+              <li class="menu-item"><a href="all-products.html">OUR WINE</a></li>
+              <!--MENU ITEM-->
+              <li class="menu-item"><a href="we-are.html">WE ARE McWILLIAM’S</a>
+                <!--SUB menu-->
+                <ul class="sub-menu">
+                  <li class="menu-item"><a href="#">OUR HISTORY &amp; HERITAGE</a></li>
+                  <li class="menu-item"><a href="#">McWILLIAM’S FAMILY</a></li>
+                  <li class="menu-item"><a href="#">OUR WINEMAKERS</a></li>
+                  <li class="menu-item"><a href="#">AUSTRALIA’S FIRST FAMILIES OF WINE</a></li>
+                </ul>
+              </li>
+              <!--MENU ITEM-->
+              <li class="menu-item"><a href="we-are.html">OUR BACKYARD</a>
+                <!--SUB menu-->
+                <ul class="sub-menu">
+                  <li class="menu-item"><a href="#">RIVERINA</a></li>
+                  <li class="menu-item"><a href="#">HILLTOPS</a></li>
+                  <li class="menu-item"><a href="#">ORANGE</a></li>
+                  <li class="menu-item"><a href="#">TUMBARUMBA</a></li>
+                  <li class="menu-item"><a href="#">CANBERRA</a></li>
+                  <li class="menu-item"><a href="#">VISIT THE RIVERINA</a></li>
+                </ul>
+              </li>
+              <!--MENU ITEM-->
+              <li class="menu-item"><a href="community.html">OUR COMMUNITY</a></li>
+              <!--MENU ITEM-->
+              <li class="menu-item"><a href="contact-page.html">CONTACT</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="l-header__mobile-menu">
+        <div class="hamburger hamburger--spring js-hamburger">
+          <div class="hamburger-box">
+            <div class="hamburger-inner"></div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="l-wrapper">
+      <div class="l-the-family">
+        <section class="l-the-family__info">
+          <!-- BEGIN info section-->
+          <div class="m-info-section"><img src="img/family.png" class="m-info-section__bg-image" alt="" role="presentation"/>
+            <div class="m-info-section__wrapper">
+              <div class="m-info-section__description">
+                <h1 class="text-up">McWILLIAM’S FAMILY</h1>
+                <p class="lg">The McWilliam family name stands for a long history of excellence in winemaking, a tradition which stretches back to the earliest days of the Australian wine industry. Since 1877, when founder Samuel McWilliam first planted vines on the banks of the Murray River in New South Wales, the McWilliam family have produced six consecutive generations of winemakers.</p>
+                <p class="lg">The wines made by McWilliam’s are more than just benchmark expressions of Australian winemaking. They are wines that draw on more than 140 years of experience, wines that tell a story of a family’s passion for winemaking.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div class="l-the-family__heading">
+          <div class="m-heading m-heading--linear">
+            <h1>OUR FUTURE</h1>
+          </div>
+          <p class="lg text-center">
+            Today, the family mantle is carried by sixth generation winemaker Scott McWilliam, <br />
+            company CEO Jeff McWilliam and Board Director David McWilliam.
+          </p>
+        </div>
+        <div class="l-the-family__future">
+          <!--BEGIN horizontal card-->
+          <div class="m-horizontal-card m-horizontal-card--bordered">
+            <div class="m-horizontal-card__image-wrapper"><img src="img/scott.png" class="m-horizontal-card__image" alt="" role="presentation"/>
+            </div>
+            <div class="m-horizontal-card__content-wrapper">
+              <!--BEGIN horizontal card descr-->
+              <div class="m-person-card-descr">
+                <h2 class="m-person-card-descr__name">SCOTT McWILLIAM
+                </h2>
+                <div class="m-person-card-descr__position">Sixth Generation Winemaker
+                </div>
+                <p>It’s fair to say, that with five generations of family winemaking behind him, Scott was going to be at the forefront of the McWilliam's families sixth generation. This hereditary love for the Australian wine industry has led Scott from university, to bringing in vintages across the globe, judging at shows both nationally and internationally, being the family ambassador and of course, an accomplished winemaker in his own-right. So much so, that he was invited to the Future Leaders program by the Winemakers Federation of Australia.</p>
+                <p>Having travelled the world to many of the beautiful places that wine is produced, Scott has a clear vision for the future of the industry ‘With rapid globalization and fluidity of information, I believe the industry will cater more towards giving the consumers a tailored experience. Rather than just making a wine and selling it to the consumer, we will better anticipate what consumers want and provide them with an experience which hopefully remains with them or lasts longer than merely the time it takes to finish the bottle’.</p>
+              </div>
+              <!--END horizontal card descr-->
+            </div>
+          </div>
+          <!--END horizontal card-->
+          <!--BEGIN horizontal card-->
+          <div class="m-horizontal-card m-horizontal-card--bordered">
+            <div class="m-horizontal-card__image-wrapper"><img src="img/jeff.png" class="m-horizontal-card__image" alt="" role="presentation"/>
+            </div>
+            <div class="m-horizontal-card__content-wrapper">
+              <!--BEGIN horizontal card descr-->
+              <div class="m-person-card-descr">
+                <h2 class="m-person-card-descr__name">JEFF McWILLIAM
+                </h2>
+                <div class="m-person-card-descr__position">Chief Executive Officer
+                </div>
+                <p>At the helm of this great family business, is Jeff McWilliam. Jeff, is a member of the fifth generation of this pioneering family and is just as passionate about the wines and the people who bring them to life as his inspiring forefathers.</p>
+                <p>Throughout Jeff’s adolescence, he worked in a variety of roles at assorted locations for McWilliam’s, however, post University, Jeff’s interests in finance and accounting led him to broaden his life experiences beyond the wonderful world of wine developing a career in Property corporations. Jeff never strayed too far from the family interests and in 2011 he was invited to join the board of directors. His experience and qualifications soon led to him being the Chairman and by 2016, the return was complete, when Jeff assumed the Chief Executive Role.</p>
+              </div>
+              <!--END horizontal card descr-->
+            </div>
+          </div>
+          <!--END horizontal card-->
+          <!--BEGIN horizontal card-->
+          <div class="m-horizontal-card m-horizontal-card--bordered">
+            <div class="m-horizontal-card__image-wrapper"><img src="img/David.png" class="m-horizontal-card__image" alt="" role="presentation"/>
+            </div>
+            <div class="m-horizontal-card__content-wrapper">
+              <!--BEGIN horizontal card descr-->
+              <div class="m-person-card-descr">
+                <h2 class="m-person-card-descr__name">DAVID McWILLIAM
+                </h2>
+                <div class="m-person-card-descr__position">Special Projects and Director
+                </div>
+                <p>Like the rest of the McWilliam clan, David is a strong advocate for the iconic wine business his forefathers built. Raised in Sydney, David spent many school holidays assisting his father, Andrew, at the Chullora bottling plant, but it was ‘among the natural beauty and openness’ of Hanwood that he truly felt at home.</p>
+                <p>David’s career path initially took him away from the Wine industry, working in areas of operations, commercial and strategy. In 2015, David chose to return to the family business, joining the board and taking on the responsibilities of special projects, the first of which was overseeing the recent relocation of the distribution centre to Hanwood and the head office to Pyrmont.</p>
+                <p>David sums up what many in the family feel about the business - ‘I am passionate about McWilliam’s Wines; the iconic Australian business, with a rich pioneering history, made up of many legendary characters of the wine industry. I’m both humbled and proud to be part of this company that’s still standing strong after 140 years’.</p>
+              </div>
+              <!--END horizontal card descr-->
+            </div>
+          </div>
+          <!--END horizontal card-->
+        </div>
+        <div class="l-the-family__group-photo"><img src="img/team.png" alt="">
+          <p class="lg text-center">L to R: Andrew McWilliam, Doug McWilliam, Jeff McWilliam, David McWilliam, Jim Brayne (Chairman) and Greg McWilliam.</p>
+        </div>
+        <div class="l-the-family__heading">
+          <div class="m-heading m-heading--linear">
+            <h1>OUR LEGACY</h1>
+          </div>
+          <p class="lg text-center">
+            From humble beginnings, the family winery has continued to grow in size and stature. The knowledge, skill <br />
+            andpassion that results from such a long family involvement in the Australian wine industry is the reason <br />
+            behind the quality and distinction of each bottle of wine produced by McWilliam’s.
+          </p>
+        </div>
+        <div class="l-the-family__legacy">
+          <!--BEGIN horizontal card-->
+          <div class="m-horizontal-card m-horizontal-card--bordered">
+            <div class="m-horizontal-card__image-wrapper"><img src="img/samuel.png" class="m-horizontal-card__image" alt="" role="presentation"/>
+            </div>
+            <div class="m-horizontal-card__content-wrapper">
+              <!--BEGIN horizontal card descr-->
+              <div class="m-person-card-descr">
+                <h2 class="m-person-card-descr__name">SAMUEL McWILLIAM
+                </h2>
+                <div class="m-person-card-descr__position">
+                </div>
+                <p>Samuel McWilliam was born on the 15th of April in 1830 at Raloo, in Northern Ireland. He arrived in Melbourne in 1857 aboard the ship “Morning Light”, along with thousands of other immigrants arriving in Victoria in search of riches during the gold rush. In 1863 he married Martha Steele and they moved to the Gippsland area, where he set up a pastoral venture.</p>
+                <p>In 1877, he purchased land at the northern edge of Corowa and planted his first vines on the property. By the time he retired in 1891, he had built the foundation of a winery that would span over 139 years, passing through generations of his family. When his wife passed away, he left the ‘Sunnyside Vineyard’ in the hands of his two sons, John James (J.J.) and Thomas, as well as his eldest daughter Eliza Jane.</p>
+              </div>
+              <!--END horizontal card descr-->
+            </div>
+          </div>
+          <!--END horizontal card-->
+          <!--BEGIN horizontal card-->
+          <div class="m-horizontal-card m-horizontal-card--bordered">
+            <div class="m-horizontal-card__image-wrapper"><img src="img/JJ.png" class="m-horizontal-card__image" alt="" role="presentation"/>
+            </div>
+            <div class="m-horizontal-card__content-wrapper">
+              <!--BEGIN horizontal card descr-->
+              <div class="m-person-card-descr">
+                <h2 class="m-person-card-descr__name">DAVID McWILLIAM
+                </h2>
+                <div class="m-person-card-descr__position">
+                </div>
+                <p>Like the rest of the McWilliam clan, David is a strong advocate for the iconic wine business his forefathers built. Raised in Sydney, David spent many school holidays assisting his father, Andrew, at the Chullora bottling plant, but it was ‘among the natural beauty and openness’ of Hanwood that he truly felt at home.</p>
+                <p>David’s career path initially took him away from the Wine industry, working in areas of operations, commercial and strategy. In 2015, David chose to return to the family business, joining the board and taking on the responsibilities of special projects, the first of which was overseeing the recent relocation of the distribution centre to Hanwood and the head office to Pyrmont.</p>
+                <p>David sums up what many in the family feel about the business - ‘I am passionate about McWilliam’s Wines; the iconic Australian business, with a rich pioneering history, made up of many legendary characters of the wine industry. I’m both humbled and proud to be part of this company that’s still standing strong after 140 years’.</p>
+              </div>
+              <!--END horizontal card descr-->
+            </div>
+          </div>
+          <!--END horizontal card-->
+        </div>
+      </div>
+    </main>
+    <footer class="l-footer">
+      <!--BEGIN contact form-->
+      <section class="l-contact-form">
+        <div class="l-contact-form__description">
+          <h2>BECOME PART OF THE McWILLIAM’S COMMUNITY.</h2>
+          <p>Join our mailing list for our latest news, offers and events.</p>
+        </div>
+        <div class="l-contact-form__form">
+          <form action="" class="m-contact-form">
+            <div class="m-input-group"><input type="text" placeholder="Name" class="m-contact-form__input"/>
+            </div>
+            <div class="m-input-group"><input type="text" placeholder="e-mail" class="m-contact-form__input"/>
+            </div>
+            <button class="m-btn">SIGN UP</button>
+          </form>
+        </div>
+      </section>
+      <!--END contact form-->
+      <div class="l-footer__socail">
+        <div class="m-footer-logo-list">
+          <div class="m-footer-logo-list__list">
+            <div class="m-footer-logo-list__item"><a href="#"><i class="i-icon-facebook"></i></a>
+            </div>
+            <div class="m-footer-logo-list__item"><a href="#"><i class="i-icon-instagram"></i></a>
+            </div>
+            <div class="m-footer-logo-list__item"><a href="#"><i class="i-icon-twitter"></i></a>
+            </div>
+            <div class="m-footer-logo-list__item"><a href="#"><i class="i-youtube"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="l-footer__privacy">
+        <div class="m-privacy-list">
+          <div class="m-privacy-list__list">
+            <div class="m-privacy-list__item"><a hre="#">CONTACT US</a>
+            </div>
+            <div class="m-privacy-list__item"><a hre="#">TERMS &amp; CONDITIONS</a>
+            </div>
+            <div class="m-privacy-list__item"><a hre="#">PRIVACY POLICY</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="l-footer__menu">
+        <!-- BEGIN dropdown menu-->
+        <div class="m-dropdown-menu">
+          <div class="m-dropdown-menu__menu"><a href="#" class="m-dropdown-menu__item">INTERNATIONAL WEBSITES<i class="i-icon-arrowdown"></i></a>
+            <div class="m-dropdown-menu__sub-menu">
+              <ul class="m-dropdown-menu__sub-list">
+                <li class="m-dropdown-menu__sub-item"><a href="#">CANADA (French)</a>
+                </li>
+                <li class="m-dropdown-menu__sub-item"><a href="#">GERMANY</a>
+                </li>
+                <li class="m-dropdown-menu__sub-item"><a href="#">HONG KONG (English)</a>
+                </li>
+                <li class="m-dropdown-menu__sub-item"><a href="#">HONG KONG (Traditional Character)</a>
+                </li>
+                <li class="m-dropdown-menu__sub-item"><a href="#">HONG KONG (Simplified Character)</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- END dropdown menu-->
+        <!-- BEGIN dropdown menu-->
+        <div class="m-dropdown-menu">
+          <div class="m-dropdown-menu__menu"><a href="#" class="m-dropdown-menu__item">OUR WINE BRANDS<i class="i-icon-arrowdown"></i></a>
+            <div class="m-dropdown-menu__sub-menu">
+              <ul class="m-dropdown-menu__sub-list">
+                <li class="m-dropdown-menu__sub-item"><a href="#">CANADA (French)</a>
+                </li>
+                <li class="m-dropdown-menu__sub-item"><a href="#">GERMANY</a>
+                </li>
+                <li class="m-dropdown-menu__sub-item"><a href="#">HONG KONG (English)</a>
+                </li>
+                <li class="m-dropdown-menu__sub-item"><a href="#">HONG KONG (Traditional Character)</a>
+                </li>
+                <li class="m-dropdown-menu__sub-item"><a href="#">HONG KONG (Simplified Character)</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- END dropdown menu-->
+        <!-- BEGIN dropdown menu-->
+        <div class="m-dropdown-menu">
+          <div class="m-dropdown-menu__menu"><a href="#" class="m-dropdown-menu__item">CORPORATE<i class="i-icon-arrowdown"></i></a>
+            <div class="m-dropdown-menu__sub-menu">
+              <ul class="m-dropdown-menu__sub-list">
+                <li class="m-dropdown-menu__sub-item"><a href="#">couple</a>
+                </li>
+                <li class="m-dropdown-menu__sub-item"><a href="#">test</a>
+                </li>
+                <li class="m-dropdown-menu__sub-item"><a href="#">items</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- END dropdown menu-->
+      </div>
+      <div class="l-footer__logos">
+        <div class="m-footer-logos">
+          <ul class="m-footer-logos__list">
+            <li class="m-footer-logos__item m-footer-logos__item--first"><img src="img/MCWILLIAMS-WORDMARK_MONO.png" alt="">
+            </li>
+            <li class="m-footer-logos__item m-footer-logos__item--second"><img src="img/AFFW_horiz_lg_BW.png" alt="">
+            </li>
+            <li class="m-footer-logos__item m-footer-logos__item--third"><img src="img/Drinkwise_logo.png" alt="">
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="l-footer__copyright">
+        <div class="m-copyright">
+          <p>New South Wales Liquor Licence: LIQP700383194. Liquor Act 2007. It is against the law to sell or supply alcohol to, or to obtain alcohol on behalf of, a person under the age of 18 years.</p>
+        </div>
+      </div>
+    </footer>
+    <!-- Load Scripts-->
+    <script>
+      var scr = {
+        "scripts": [{
+            "src": "https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js",
+            "async": false
+          }, {
+            "src": "libs/sticky-kit/jquery.sticky-kit.min.js",
+            "async": false
+          }, {
+            "src": "js/common.js",
+            "async": false
+        }]
+      };
+      !function (t, n, r) {
+        "use strict";
+        var c = function (t) {
+          if ("[object Array]" !== Object.prototype.toString.call(t)) return !1;
+          for (var r = 0; r < t.length; r++) {
+            var c = n.createElement("script"),
+                    e = t[r];
+            c.src = e.src, c.async = e.async, n.body.appendChild(c)
+          }
+          return !0
+        };
+        t.addEventListener ? t.addEventListener("load", function () {
+          c(r.scripts);
+        }, !1) : t.attachEvent ? t.attachEvent("onload", function () {
+          c(r.scripts)
+        }) : t.onload = function () {
+          c(r.scripts)
+        }
+      }(window, document, scr);
+    </script>
+  </body>
+</html>

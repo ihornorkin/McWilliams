@@ -1,0 +1,44 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+/* 1rem = 1px */
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: $white;
+  font-family: $proximanova;
+  font-size: 1.6rem;
+  letter-spacing: .015rem;
+  line-height: 2.2rem;
+
+  @include container();
+}
+
+::-moz-selection {
+  background: $sandy-brown;
+  color: $white;
+}
+
+::selection {
+  background: $sandy-brown;
+  color: $white;
+}
+
+img {
+  max-width: 100%;
+}
+
+
+
+
+

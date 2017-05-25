@@ -1,0 +1,267 @@
+.m-menu {
+  $module: &;
+
+  margin-top: 2.8rem;
+  margin-right: 7rem;
+
+  @include breakpoint(max-width $lg) {
+    margin: 0;
+  }
+
+  &__list {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    height: 4.2rem;
+    justify-content: space-between;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    @include breakpoint(max-width $lg) {
+      align-items: flex-start;
+      flex-direction: column;
+      height: auto;
+    }
+
+    & > li {
+      align-items: center;
+      display: flex;
+      flex-direction: row;
+      height: 100%;
+
+      @include breakpoint(max-width $lg) {
+        padding-left: 4rem;
+        padding-right: 2rem;
+      }
+
+      &:nth-child(2) {
+
+        .sub-menu {
+
+          li:nth-child(3),
+          li:nth-child(4) {
+            max-width: 14rem;
+
+            @include breakpoint(max-width $lg) {
+              max-width: 100%;
+            }
+          }
+        }
+      }
+
+      @include breakpoint(max-width $lg) {
+        display: inline-block;
+        margin-bottom: 3rem;
+        margin-right: 5.5rem;
+        //position: relative;
+        width: 100%;
+      }
+
+      &:nth-child(2),
+      &:nth-child(3) {
+
+        &:hover a {
+          &::after {
+            opacity: 1;
+          }
+        }
+
+        @include breakpoint(max-width $lg) {
+          a::after {
+            opacity: 1;
+          }
+        }
+      }
+
+      &:hover {
+        a {
+          &::before {
+            border-bottom: 2px solid $charcoal-grey;
+          }
+        }
+
+        > ul {
+          opacity: 1;
+          visibility: visible;
+
+          @include breakpoint(max-width $lg) {
+            opacity: 0;
+            visibility: hidden;
+          }
+        }
+      }
+
+      > a {
+        position: relative;
+
+        @include breakpoint(max-width $lg) {
+          display: inline-block;
+          font-size: 2.4rem;
+          line-height: 1.44;
+          width: 100%;
+        }
+
+        &::after {
+          content: '';
+          position: relative;
+          right: calc(50% - 6.5px);
+          bottom: -4px;
+          margin-left: -12px;
+          border-style: solid;
+          border-width: 0 .65rem .6rem .65rem;
+          border-color: transparent transparent $charcoal-grey transparent;
+          opacity: 0;
+          transition: opacity .3s ease;
+          width: 0;
+          height: 0;
+
+          @include breakpoint(max-width $lg) {
+            display: none;
+          }
+        }
+
+        &::before {
+          border-bottom: 2px solid transparent;
+          content: '';
+          display: block;
+          padding-bottom: .3rem;
+          position: relative;
+          top: 28px;
+          transition: all .5s ease;
+
+          @include breakpoint(max-width $lg) {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  a {
+    color: $charcoal-grey;
+    letter-spacing: 1.2px;
+    line-height: 1.92;
+    text-decoration: none;
+
+    &:hover {
+      color: $charcoal-grey;
+    }
+  }
+
+  ul.sub-menu {
+    $module: &;
+
+    align-items: center;
+    background-color: rgba($charcoal-grey, .85);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    left: 0;
+    min-height: 10rem;
+    height: 10rem;
+    opacity: 0;
+    padding: 1rem 1.5rem;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 100%;
+    transition: all .3s ease-in-out;
+    visibility: hidden;
+    width: auto;
+    z-index: 10;
+
+    @include breakpoint(max-width $lg) {
+      background-color: $white;
+      border: solid 2px $charcoal-grey;
+      display: block;
+      left: -2px;
+      min-height: calc(100% + 4px);
+      padding: 3.5rem 0 1.1rem;
+      position: absolute;
+      right: -2px;
+      text-align: left;
+      top: -2px;
+      transform: translateX(100%);
+    }
+
+    &--opened {
+      @include breakpoint(max-width $lg) {
+        height: auto;
+        opacity: 1 !important;
+        transform: translateX(0);
+        visibility: visible !important;
+        z-index: 15;
+      }
+    }
+
+    .sub-menu__back-to-menu {
+      display: none;
+      cursor: pointer;
+
+      @include breakpoint(max-width $lg) {
+        display: block;
+      }
+
+      span {
+        align-items: center;
+        display: flex;
+
+        i {
+          margin-right: 1rem;
+        }
+      }
+    }
+
+    > li {
+      display: flex;
+      list-style-type: none;
+      max-width: 17rem;
+
+      @include breakpoint(max-width $lg) {
+        font-size: 2.4rem;
+        max-width: 100%;
+        padding-left: 4rem;
+        padding-right: 2rem;
+        line-height: 1.44;
+        margin-bottom: 3rem;
+      }
+
+      a {
+        color: $white;
+        letter-spacing: .3px;
+        line-height: 1.33;
+
+        @include breakpoint(max-width $lg) {
+          color: $charcoal-grey;
+        }
+
+        &:hover {
+          color: $white;
+
+          @include breakpoint(max-width $lg) {
+            color: $charcoal-grey;
+          }
+        }
+      }
+    }
+  }
+
+  &__angle-btn {
+    background-color: transparent;
+    border: 0;
+    height: 3rem;
+    position: absolute;
+    right: 2rem;
+    width: 3rem;
+    z-index: 12;
+
+    @include breakpoint(min-width $lg) {
+      display: none;
+    }
+
+    i {
+      font-size: 2.5rem;
+    }
+  }
+}

@@ -1,0 +1,159 @@
+.m-dropdown-menu {
+  $module: &;
+
+  position: relative;
+  display: inline-block;
+  text-align: left;
+  transition: background-color $animation-type-1, color $animation-type-1;
+
+  &:hover {
+    @include breakpoint(max-width $tablet) {
+      background-color: #94a6b1;
+
+      #{$module}__item {
+        color: $white;
+      }
+    }
+
+    #{$module}__sub-menu {
+      @include breakpoint(min-width $tablet) {
+        opacity: 1;
+        transform: translateY(0%);
+        transition-delay: 0s, .03s, 0s;
+        visibility: visible;
+        z-index: 1;
+      }
+    }
+
+
+    #{$module}__menu > #{$module}__item {
+      color: $sandy-brown;
+
+      @include breakpoint(max-width $tablet) {
+        color: $white;
+      }
+    }
+  }
+
+  &--active {
+
+    @include breakpoint(max-width $tablet) {
+      background-color: #94a6b1;
+    }
+
+    #{$module}__sub-menu {
+
+      @include breakpoint(max-width $tablet) {
+        opacity: 1;
+        transform: translateY(0%);
+        transition-delay: 0s, .03s, 0s;
+        visibility: visible;
+        z-index: 1;
+      }
+    }
+
+    #{$module}__menu > #{$module}__item {
+
+      @include breakpoint(max-width $tablet) {
+        color: $white;
+      }
+    }
+  }
+
+  a {
+    color: $black;
+
+    &:hover {
+      color: $pancho;
+    }
+  }
+
+  &__menu {
+
+    @include breakpoint(max-width $tablet) {
+      width: 100%;
+    }
+  }
+
+  &__item {
+    font-size: 1.6rem;
+    line-height: 2.17;
+    letter-spacing: 0.2px;
+    text-transform: uppercase;
+
+    @include breakpoint(max-width $tablet) {
+      text-align: center;
+    }
+
+    &:active,
+    &:focus {
+      color: $black;
+    }
+
+    @include breakpoint(max-width $tablet) {
+      align-items: stretch;
+      display: flex;
+      flex-grow: 1;
+      font-size: 1.4rem;
+      height: 100%;
+      justify-content: center;
+      line-height: 1.43;
+      padding: 1.4rem;
+      width: 100%;
+    }
+
+    i {
+      margin-left: 1rem;
+    }
+  }
+
+  &__sub-menu {
+    background-color: $white;
+    border: solid 1px $charcoal-grey;
+    left: 0;
+    opacity: 0;
+    padding: 1rem 1.5rem;
+    position: absolute;
+    top: 100%;
+    transform: translateY(-50%);
+    transition: all $animation-type-1;
+    visibility: hidden;
+    width: auto;
+    z-index: -1;
+
+    @include breakpoint(max-width $tablet) {
+      bottom: 100%;
+      padding: 0;
+      top: auto;
+      width: 100%;
+      transform: none;
+    }
+  }
+
+  &__sub-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      font-size: 1.4rem;
+      white-space: nowrap;
+    }
+
+    a {
+      @include breakpoint(max-width $tablet) {
+        align-items: center;
+        border-bottom: 1px solid #c1c1c1;
+        display: flex;
+        font-size: 1.8rem;
+        min-height: 8rem;
+        padding: 0 3.5rem;
+      }
+    }
+  }
+
+  &__sub-item {
+    font-size: 1.4rem;
+    white-space: nowrap;
+  }
+}

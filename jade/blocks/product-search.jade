@@ -1,0 +1,35 @@
+mixin b-product-search
+
+  //BEGIN product search
+  +b.m-product-search
+    +e.wrapper
+      +e.title SEARCH BY:
+      +e.UL.list
+        +e.LI.item
+          a(href="#") ALL WINES
+        +e.LI.item
+          a(href="#") RANGE
+        +e.LI.item
+          a(href="#") WINE TYPE
+        +e.LI.item
+          +e.A(href="#").link VARIETAL
+        +e.LI.item
+          +e.A(href="#").link PERFECT FOR...
+          +e.UL.sub-search
+            li
+              a(href="#") EVERYDAY
+            li
+              a(href="#") GIFTING
+            li
+              a(href="#") WARM DAYS
+            li
+              a(href="#") ENTERTAINING
+            li
+              a(href="#") SHARING
+
+      +e.search
+        .m-input-group
+          input(type="text" placeholder="What do you like to drink?")
+          .m-btn
+            i.i-icon-search
+  //END product search

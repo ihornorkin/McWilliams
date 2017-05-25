@@ -1,0 +1,33 @@
+.l-product-page-review {
+  margin-bottom: 6.8rem;
+  padding-left: 16rem;
+
+  @include breakpoint(max-width $tablet) {
+    margin-bottom: 5.5rem;
+    padding: 0 4rem;
+  }
+
+  &__heading {
+    margin-bottom: 2rem;
+    margin-top: 4.5rem;
+
+    @include breakpoint(max-width $tablet) {
+      margin-bottom: 2.5rem;
+    }
+  }
+
+  &__cards {
+    display: flex;
+    flex-wrap: wrap;
+
+    .m-review-card {
+      max-width: 40rem;
+      padding-right: 2rem;
+      width: 100%;
+
+      @include breakpoint(max-width $tablet) {
+        max-width: 100%;
+      }
+    }
+  }
+}

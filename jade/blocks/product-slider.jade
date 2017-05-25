@@ -1,0 +1,14 @@
+mixin b-product-slider
+
+  //BEGIN product slider
+  +b.m-product-slider
+
+    +e.wrapper
+      +e.IMG(src="img/product-img.png").image
+      +e.controls
+        a(href="#").left
+          i.i-icon-arrowleft
+        a(href="#").right
+          i.i-icon-arrowright
+
+  //END product slider

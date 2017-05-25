@@ -1,0 +1,9 @@
+.l-modal-thanks {
+  max-width: 70rem;
+  width: 100%;
+  min-height: 32rem;
+
+  @include breakpoint(max-width $tablet) {
+    min-height: 30rem;
+  }
+}

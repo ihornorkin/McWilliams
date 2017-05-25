@@ -1,0 +1,22 @@
+mixin b-backyard-card(heading, descr)
+
+  //BEGIN backyard card
+
+  +b.m-backyard-card
+    +e.ico-wrapper
+      block
+
+    +e.descr-wrapper
+      +e.H2.heading= heading
+
+      +e.P.descr= descr
+
+        +e.icon
+          span.i-icon-button-arrowright
+            span.path1
+            span.path2
+
+      a(href="#").m-btn LEARN MORE
+
+
+  //END backyard card

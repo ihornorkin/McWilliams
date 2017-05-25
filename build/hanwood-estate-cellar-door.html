@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name="description" content="">
+    <meta name="description" content="">
+    <title>Hanwood Estate Cellar Door</title>
+    <!-- Grid Styles-->
+    <style></style>
+    <!-- First Sections b-navigation styles-->
+    <style></style>
+    <!-- Fonts-->
+    <!--[if lt IE 9]>
+    <script src="libs/html5shiv/dist/html5shiv.js"></script><![endif]-->
+    <!-- Load CSS, CSS Localstorage & WebFonts Main Function-->
+    <script>
+      !function (e) {
+        "use strict";
+      
+        function t(e, t, n) {
+          e.addEventListener ? e.addEventListener(t, n, !1) : e.attachEvent && e.attachEvent("on" + t, n)
+        }
+      
+        function n(t, n) {
+          return e.localStorage && localStorage[t + "_content"] && localStorage[t + "_file"] === n
+        }
+      
+        function a(t, a) {
+          if (e.localStorage && e.XMLHttpRequest) n(t, a) ? o(localStorage[t + "_content"]) : l(t, a);
+          else {
+            var s = r.createElement("link");
+            s.href = a, s.id = t, s.rel = "stylesheet", s.type = "text/css", r.getElementsByTagName("head")[0].appendChild(s), r.cookie = t
+          }
+        }
+      
+        function l(e, t) {
+          var n = new XMLHttpRequest;
+          n.open("GET", t, !0), n.onreadystatechange = function () {
+            4 === n.readyState && 200 === n.status && (o(n.responseText), localStorage[e + "_content"] = n.responseText, localStorage[e + "_file"] = t)
+          }, n.send()
+        }
+      
+        function o(e) {
+          var t = r.createElement("style");
+          t.setAttribute("type", "text/css"), r.getElementsByTagName("head")[0].appendChild(t), t.styleSheet ? t.styleSheet.cssText = e : t.innerHTML = e
+        }
+      
+        var r = e.document;
+        e.loadCSS = function (e, t, n) {
+          var a, l = r.createElement("link");
+          if (t) a = t;
+          else {
+            var o;
+            o = r.querySelectorAll ? r.querySelectorAll("style,link[rel=stylesheet],script") : (r.body || r.getElementsByTagName("head")[0]).childNodes, a = o[o.length - 1]
+          }
+          var s = r.styleSheets;
+          l.rel = "stylesheet", l.href = e, l.media = "only x", a.parentNode.insertBefore(l, t ? a : a.nextSibling);
+          var c = function (e) {
+            for (var t = l.href, n = s.length; n--;)
+              if (s[n].href === t) return e();
+            setTimeout(function () {
+              c(e)
+            })
+          };
+          return l.onloadcssdefined = c, c(function () {
+            l.media = n || "all"
+          }), l
+        }, e.loadLocalStorageCSS = function (l, o) {
+          n(l, o) || r.cookie.indexOf(l) > -1 ? a(l, o) : t(e, "load", function () {
+            a(l, o)
+          })
+        }
+      }(this);
+      
+    </script>
+    <!-- Load CSS Start-->
+    <!-- script.loadCSS( "/css/header.min.css", false, "all" );
+    -->
+    <script>
+      loadCSS("libs/normalize-css/normalize.css", false, "all");
+      loadCSS("css/styles.min.css", false, "all");
+    </script>
+    <!-- Load CSS End-->
+    <!-- Load CSS Compilled without JS-->
+    <noscript>
+      <link rel="stylesheet" href="libs/normalize-css/normalize.css">
+      <link rel="stylesheet" href="css/styles.min.css">
+      
+    </noscript>
+  </head>
+  <body>
+    <header class="l-header">
+      <div class="l-header__logo"><a href="index.html"><img src="img/logo.svg" alt="logo" class="l-header__logo-svg" title=""/></a>
+      </div>
+      <div class="l-header__menu-wrapper">
+        <div class="l-header__utills">
+          <div class="m-header-utils">
+            <ul class="m-header-utils__list">
+              <li class="m-header-utils__item"><a href="#">JOIN OUR MAILING LIST<i class="i-icon-mail"></i></a>
+              </li>
+              <li class="m-header-utils__item"><a href="#">SHOP WINES<i class="i-icon-arrowright"></i></a>
+              </li>
+              <li class="m-header-utils__item"><a href="#">SEARCH<i class="i-icon-search"></i></a>
+              </li>
+              <li class="m-header-utils__item">
+                <!-- BEGIN search form-->
+                <form action="" class="m-search-from">
+                  <div class="m-search-from__input-wrapper"><input type="text" id="search" placeholder="SEARCH" class="m-search-from__input"/><i class="i-icon-search"></i>
+                  </div>
+                </form>
+                <!-- END search form-->
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="l-header__menu">
+          <nav class="m-menu">
+            <ul class="m-menu__list">
+              <!--MENU ITEM-->
+              <li class="menu-item"><a href="all-products.html">OUR WINE</a></li>
+              <!--MENU ITEM-->
+              <li class="menu-item"><a href="we-are.html">WE ARE McWILLIAM’S</a>
+                <!--SUB menu-->
+                <ul class="sub-menu">
+                  <li class="menu-item"><a href="#">OUR HISTORY &amp; HERITAGE</a></li>
+                  <li class="menu-item"><a href="#">McWILLIAM’S FAMILY</a></li>
+                  <li class="menu-item"><a href="#">OUR WINEMAKERS</a></li>
+                  <li class="menu-item"><a href="#">AUSTRALIA’S FIRST FAMILIES OF WINE</a></li>
+                </ul>
+              </li>
+              <!--MENU ITEM-->
+              <li class="menu-item"><a href="we-are.html">OUR BACKYARD</a>
+                <!--SUB menu-->
+                <ul class="sub-menu">
+                  <li class="menu-item"><a href="#">RIVERINA</a></li>
+                  <li class="menu-item"><a href="#">HILLTOPS</a></li>
+                  <li class="menu-item"><a href="#">ORANGE</a></li>
+                  <li class="menu-item"><a href="#">TUMBARUMBA</a></li>
+                  <li class="menu-item"><a href="#">CANBERRA</a></li>
+                  <li class="menu-item"><a href="#">VISIT THE RIVERINA</a></li>
+                </ul>
+              </li>
+              <!--MENU ITEM-->
+              <li class="menu-item"><a href="community.html">OUR COMMUNITY</a></li>
+              <!--MENU ITEM-->
+              <li class="menu-item"><a href="contact-page.html">CONTACT</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="l-header__mobile-menu">
+        <div class="hamburger hamburger--spring js-hamburger">
+          <div class="hamburger-box">
+            <div class="hamburger-inner"></div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="l-wrapper">
+      <div class="l-cellar-door">
+        <section class="l-cellar-door__info">
+          <!-- BEGIN info section-->
+          <div class="m-info-section"><img src="img/cellardoor.png" class="m-info-section__bg-image" alt="" role="presentation"/>
+            <div class="m-info-section__wrapper">
+              <div class="m-info-section__description">
+                <h1 class="text-up">HANWOOD ESTATE CELLAR DOOR</h1>
+                <p class="lg">Set in the midst of a stunning rural Australian landscape, the Hanwood Estate Cellar Door captures the rich history of McWilliam’s and the essence of the Riverina wine region.</p>
+                <p class="lg">Established in 1917, the winery stands today as a pillar of excellence and an icon of the Australian wine industry. Nestled between vineyards among the oldest in New South Wales, the famous Hanwood Estate Cellar Door is an idyllic setting to taste the entire range of a winery that has helped shape the face of the Australian wine industry.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="l-cellar-door__contact">
+          <div class="l-cellar-door__contact-info">
+            <div class="m-contact-us">
+              <div class="m-contact-us__contact">
+                <h2 class="m-contact-us__heading">CONTACT US
+                </h2><span>Jack McWilliam Road</span><span>Hanwood, NSW 2680</span><span>Hanwood Office: (02) 6963 3400</span><span>Head Office: (02) 9722</span>
+              </div>
+              <div class="m-contact-us__hours">
+                <h2 class="m-contact-us__heading">OPENING HOURS
+                </h2>
+                <div class="m-contact-us__hours-item"><span>Open Wednesday – Saturday</span><span>10am – 4pm</span>
+                </div>
+                <div class="m-contact-us__hours-item"><span>Winery tours operate every</span><span>Thursday at 11:45am</span><span>during May – December.</span>
+                </div>
+                <div class="m-contact-us__hours-item"><span>CLOSED:</span><span>Good Friday</span><span>Christmas Day</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="l-cellar-door__contact-descr">
+            <p>The Hanwood Cellar Door provides the perfect setting for a truly memorable wine tasting experience. At a location that embodies the beauty of the Riverina region and pays tribute to the proud history of the winery, the Hanwood team have the privilege of sharing a selection of the award winning wines that have helped make McWilliam’s one of Australia’s favourite wineries.</p>
+            <p>Designed by fourth generation family member Glen McWilliam and completed in 1973, the Hanwood Estate Cellar Door is an instantly recognisable symbol of the Riverina wine region and McWilliam’s Winery. Shaped like a wine barrel and built to exact scale, complete with staves and hoops, the Hanwood Cellar Door is a suitably unique home for a winery that is so rich in history and so significant in the scope of the local wine industry.</p>
+            <p>Over its 100 year history, the home of McWilliam’s has continued to develop and expand, while always retaining a proud acknowledgement of its past. Among the historical features is a breathtaking mural paying tribute to the winery’s founders, painted on glass and featured on one of the interior walls of the Cellar Door. A bronze statue of Hanwood founder JJ McWilliam can also be found perched among the stunning gardens of the Estate.</p>
+            <p>Awarded as the Best Tasting Experience by Gourmet Traveller Magazine Australia in the Riverina in 2014, Hanwood Estate is a  idyllic location to enjoy the best wines McWilliam’s have to offer. The Cellar Door is RV friendly and the sprawling lawns are the perfect place to set up a picnic blanket and soak up the best landscapes the Riverina has to offer, while sipping on some of Australia’s most popular and awarded wines.</p>
+          </div>
+        </section>
+        <div class="l-cellar-door__cellar-door">
+          <!--BEGIN horizontal card-->
+          <div class="m-horizontal-card m-horizontal-card--bordered">
+            <div class="m-horizontal-card__image-wrapper"><img src="img/karin-cellardoor.png" class="m-horizontal-card__image" alt="" role="presentation"/>
+            </div>
+            <div class="m-horizontal-card__content-wrapper">
+              <!--BEGIN horizontal card descr-->
+              <div class="m-person-card-descr">
+                <h2 class="m-person-card-descr__name">KARIN PENNINGA
+                </h2>
+                <div class="m-person-card-descr__position">Cellar Door Manager
+                </div>
+                <p>Karin Penninga is the Cellar Door Manager at McWilliam’s Hanwood Estate. Originally from the Netherlands, she studied Agricultural Economics-Marketing (BSc) and travelled whilst doing her traineeships in various countries in Europe and Africa. Having worked two years in the recruitment industry after her graduation it was time to travel again, emigrating to Australia in 2001.</p>
+                <p>Karin worked in the McWilliam’s Wines laboratory for two vintages and then returned to the recruitment industry. After some experience managing a labour hire company and a backpackers hostel, Karin returned to her roots as the Manager of the Cellar Door at Hanwood Estate. </p>
+                <p>Karin is responsible for the running of the Cellar Door, site events and the member’s wine club. Karin enjoys the opportunity to share her passion for the McWilliam’s ranges.</p>
+              </div>
+              <!--END horizontal card descr-->
+            </div>
+          </div>
+          <!--END horizontal card-->
+          <!--BEGIN horizontal card-->
+          <div class="m-horizontal-card m-horizontal-card--bordered">
+            <div class="m-horizontal-card__image-wrapper"><img src="img/mel-cellardoor.png" class="m-horizontal-card__image" alt="" role="presentation"/>
+            </div>
+            <div class="m-horizontal-card__content-wrapper">
+              <!--BEGIN horizontal card descr-->
+              <div class="m-person-card-descr">
+                <h2 class="m-person-card-descr__name">MELINDA BONETTI
+                </h2>
+                <div class="m-person-card-descr__position">Cellar Hand
+                </div>
+                <p>Melinda Bonetti has worked for McWilliam’s Wines for over 13 years. Starting off as a cellar hand at McWilliam’s Yenda winery during a University break, she managed all of McWilliam’s commercial wine stores maturing in barrel and learnt the basic principles of winemaking. After five years in this role she moved into the Yenda office, before shifting to the Cellar Door at Hanwood Estate when the two sites merged in 2007. </p>
+                <p>As Assistant Cellar Door Manager at Hanwood Estate, Melinda’s role is to assist Karin Penninga (Cellar Door Manager) in the daily operations and management of the Hanwood Estate. She enjoys meeting new and returning travelers to the Riverina and watching customers delight in the diverse range of wines McWilliam’s has to offer.</p>
+              </div>
+              <!--END horizontal card descr-->
+            </div>
+          </div>
+          <!--END horizontal card-->
+        </div>
+      </div>
+    </main>
+    <footer class="l-footer">
+      <!--BEGIN contact form-->
+      <section class="l-contact-form">
+        <div class="l-contact-form__description">
+          <h2>BECOME PART OF THE McWILLIAM’S COMMUNITY.</h2>
+          <p>Join our mailing list for our latest news, offers and events.</p>
+        </div>
+        <div class="l-contact-form__form">
+          <form action="" class="m-contact-form">
+            <div class="m-input-group"><input type="text" placeholder="Name" class="m-contact-form__input"/>
+            </div>
+            <div class="m-input-group"><input type="text" placeholder="e-mail" class="m-contact-form__input"/>
+            </div>
+            <button class="m-btn">SIGN UP</button>
+          </form>
+        </div>
+      </section>
+      <!--END contact form-->
+      <div class="l-footer__socail">
+        <div class="m-footer-logo-list">
+          <div class="m-footer-logo-list__list">
+            <div class="m-footer-logo-list__item"><a href="#"><i class="i-icon-facebook"></i></a>
+            </div>
+            <div class="m-footer-logo-list__item"><a href="#"><i class="i-icon-instagram"></i></a>
+            </div>
+            <div class="m-footer-logo-list__item"><a href="#"><i class="i-icon-twitter"></i></a>
+            </div>
+            <div class="m-footer-logo-list__item"><a href="#"><i class="i-youtube"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="l-footer__privacy">
+        <div class="m-privacy-list">
+          <div class="m-privacy-list__list">
+            <div class="m-privacy-list__item"><a hre="#">CONTACT US</a>
+            </div>
+            <div class="m-privacy-list__item"><a hre="#">TERMS &amp; CONDITIONS</a>
+            </div>
+            <div class="m-privacy-list__item"><a hre="#">PRIVACY POLICY</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="l-footer__menu">
+        <!-- BEGIN dropdown menu-->
+        <div class="m-dropdown-menu">
+          <div class="m-dropdown-menu__menu"><a href="#" class="m-dropdown-menu__item">INTERNATIONAL WEBSITES<i class="i-icon-arrowdown"></i></a>
+            <div class="m-dropdown-menu__sub-menu">
+              <ul class="m-dropdown-menu__sub-list">
+                <li class="m-dropdown-menu__sub-item"><a href="#">CANADA (French)</a>
+                </li>
+                <li class="m-dropdown-menu__sub-item"><a href="#">GERMANY</a>
+                </li>
+                <li class="m-dropdown-menu__sub-item"><a href="#">HONG KONG (English)</a>
+                </li>
+                <li class="m-dropdown-menu__sub-item"><a href="#">HONG KONG (Traditional Character)</a>
+                </li>
+                <li class="m-dropdown-menu__sub-item"><a href="#">HONG KONG (Simplified Character)</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- END dropdown menu-->
+        <!-- BEGIN dropdown menu-->
+        <div class="m-dropdown-menu">
+          <div class="m-dropdown-menu__menu"><a href="#" class="m-dropdown-menu__item">OUR WINE BRANDS<i class="i-icon-arrowdown"></i></a>
+            <div class="m-dropdown-menu__sub-menu">
+              <ul class="m-dropdown-menu__sub-list">
+                <li class="m-dropdown-menu__sub-item"><a href="#">CANADA (French)</a>
+                </li>
+                <li class="m-dropdown-menu__sub-item"><a href="#">GERMANY</a>
+                </li>
+                <li class="m-dropdown-menu__sub-item"><a href="#">HONG KONG (English)</a>
+                </li>
+                <li class="m-dropdown-menu__sub-item"><a href="#">HONG KONG (Traditional Character)</a>
+                </li>
+                <li class="m-dropdown-menu__sub-item"><a href="#">HONG KONG (Simplified Character)</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- END dropdown menu-->
+        <!-- BEGIN dropdown menu-->
+        <div class="m-dropdown-menu">
+          <div class="m-dropdown-menu__menu"><a href="#" class="m-dropdown-menu__item">CORPORATE<i class="i-icon-arrowdown"></i></a>
+            <div class="m-dropdown-menu__sub-menu">
+              <ul class="m-dropdown-menu__sub-list">
+                <li class="m-dropdown-menu__sub-item"><a href="#">couple</a>
+                </li>
+                <li class="m-dropdown-menu__sub-item"><a href="#">test</a>
+                </li>
+                <li class="m-dropdown-menu__sub-item"><a href="#">items</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- END dropdown menu-->
+      </div>
+      <div class="l-footer__logos">
+        <div class="m-footer-logos">
+          <ul class="m-footer-logos__list">
+            <li class="m-footer-logos__item m-footer-logos__item--first"><img src="img/MCWILLIAMS-WORDMARK_MONO.png" alt="">
+            </li>
+            <li class="m-footer-logos__item m-footer-logos__item--second"><img src="img/AFFW_horiz_lg_BW.png" alt="">
+            </li>
+            <li class="m-footer-logos__item m-footer-logos__item--third"><img src="img/Drinkwise_logo.png" alt="">
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="l-footer__copyright">
+        <div class="m-copyright">
+          <p>New South Wales Liquor Licence: LIQP700383194. Liquor Act 2007. It is against the law to sell or supply alcohol to, or to obtain alcohol on behalf of, a person under the age of 18 years.</p>
+        </div>
+      </div>
+    </footer>
+    <!-- Load Scripts-->
+    <script>
+      var scr = {
+        "scripts": [{
+            "src": "https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js",
+            "async": false
+          }, {
+            "src": "libs/sticky-kit/jquery.sticky-kit.min.js",
+            "async": false
+          }, {
+            "src": "js/common.js",
+            "async": false
+        }]
+      };
+      !function (t, n, r) {
+        "use strict";
+        var c = function (t) {
+          if ("[object Array]" !== Object.prototype.toString.call(t)) return !1;
+          for (var r = 0; r < t.length; r++) {
+            var c = n.createElement("script"),
+                    e = t[r];
+            c.src = e.src, c.async = e.async, n.body.appendChild(c)
+          }
+          return !0
+        };
+        t.addEventListener ? t.addEventListener("load", function () {
+          c(r.scripts);
+        }, !1) : t.attachEvent ? t.attachEvent("onload", function () {
+          c(r.scripts)
+        }) : t.onload = function () {
+          c(r.scripts)
+        }
+      }(window, document, scr);
+    </script>
+  </body>
+</html>

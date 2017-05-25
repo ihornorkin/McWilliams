@@ -1,0 +1,15 @@
+.m-copyright {
+  text-align: center;
+
+  p {
+    color: $charcoal-grey;
+    font-size: 1.4rem;
+    letter-spacing: .2px;
+    line-height: 2.47;
+
+    @include breakpoint(max-width $tablet) {
+      line-height: 1.43;
+      padding: 0 6rem;
+    }
+  }
+}

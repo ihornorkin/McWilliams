@@ -1,0 +1,70 @@
+include ../bemto/bemto
+include ../blocks/index
+include ../header/_header
+include ../footer/_footer
+
++header("Our Backyard")
+  main.l-wrapper
+    +b.l-our-backyard
+      +e.info
+        +b-info-section('img/regions.png', "OUR BACKYARD")
+          block descr
+            p.lg The Australian landscape is as varied as it is vast. From hot, rural locations to mountainous cool-climate regions, the New South Wales vineyards from which McWilliam’s source their fruit embody this diversity.
+            p.lg The weather conditions, geography and soil are some of the key factors that inevitably leave their footprint across each bottle of wine. The McWilliam’s winemaking philosophy centres on the quality of fruit and this means that there must be an intimate understanding across all regions of the complex relationship that exists between the land, the climate and the winemaker.
+
+      +e.cards
+        +b-backyard-card( "RIVERINA", "The tropical climate of the Riverina area produces a range of quality mainstream varietals like Shiraz and Chardonnay as well as quality dessert wines.")
+          span.i-icon-riverina
+            span.path1
+            span.path2
+            span.path3
+            span.path4
+            span.path5
+
+        +b-backyard-card( "ORANGE", "Orange is a cool-climate region producing premium Shiraz, Cabernet Sauvignon and Chardonnay wines but above all a world-class Sauvignon Blanc.")
+          span.i-icon-orange
+            span.path1
+            span.path2
+            span.path3
+            span.path4
+
+        //+b-backyard-card( "HILLTOPS", "")
+        +b-backyard-card( "HILLTOPS", "Cool climate conditions, high altitude and temperature fluctuations provide a perfect environment for the production of premium wines.")
+          span.i-icon-hilltops
+            span.path1
+            span.path2
+            span.path3
+            span.path4
+
+        +b-backyard-card( "TUMBARUMBA", "The unique alpine location of the Tumbarumba region produces premium sparkling wines, as well as cool-climate Pinot Noir and Chardonnay table wines")
+          span.i-icon-tumbarumba
+            span.path1
+            span.path2
+            span.path3
+            span.path4
+
+        +b-backyard-card( "CANBERRA", "Set within a tranquil rural countryside, the area is one of the most promising emerging wine regions of NSW, producing world class Shiraz and Chardonnay.")
+          span.i-icon-canberra
+            span.path1
+            span.path2
+            span.path3
+            span.path4
+
+
+
+      +e.post
+        +b-blog-article('img/cellardoor.png', 1)
+          .m-heading.m-heading--linear.m-heading--linear-100
+            h1 THE CELLAR DOOR
+
+          p.lg The McWilliam’s portfolio of award-winning wines captures the philosophy of excellence in winemaking.
+          a(href="#").m-btn LEARN MORE
+
+      +e.riverina
+        +b-blog-article('img/region.png', 1)
+          .m-heading.m-heading--linear.m-heading--linear-100
+            h1 THE RIVERINA
+
+        +b-riverina-descr
+
+  +footer()

@@ -1,0 +1,93 @@
+.l-header {
+  min-height: 13.4rem;
+  position: relative;
+
+  @include breakpoint(max-width $lg) {
+    min-height: 12rem;
+  }
+
+  &__logo {
+    float: left;
+    padding: 2.7rem 0 1.6rem 5.2rem;
+
+    @include breakpoint(max-width $lg) {
+      padding-left: 2.1rem;
+    }
+  }
+
+  &__logo-svg {
+    display: block;
+    height: 9.1rem;
+    width: 21.2rem;
+
+    @include breakpoint(max-width $lg) {
+      height: 7.7rem;
+      width: 17.9rem;
+    }
+  }
+
+  &__menu-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    @include breakpoint(max-width $lg) {
+      border: solid 2px $charcoal-grey;
+      opacity: 0;
+      padding: 3.5rem 0 1.1rem;
+      position: absolute;
+      transform: translateX(100%) translateZ(0);;
+      right: 0;
+      top: 100%;
+      transition: all $animation-type-1;
+      visibility: hidden;
+    }
+
+    &--opened {
+      @include breakpoint(max-width $lg) {
+        background: $white;
+        border-right: 0;
+        opacity: 1;
+        transition: all $animation-type-1;
+        transform: translateX(0);
+        visibility: visible;
+        z-index: 10;
+      }
+    }
+  }
+
+  &__utills {
+    align-self: flex-end;
+
+    @include breakpoint(max-width $lg) {
+      align-self: flex-start;
+      order: 2;
+      width: 100%;
+
+      .m-search-from {
+        display: none;
+      }
+    }
+  }
+
+  &__menu {
+    align-self: flex-end;
+    width: 86.5%;
+
+    @include breakpoint(max-width $lg) {
+      align-self: flex-start;
+      order: 1;
+      width: 100%;
+    }
+  }
+
+  &__mobile-menu {
+    display: none;
+    position: absolute;
+    right: 4rem;
+    top: 5.3rem;
+
+    @include breakpoint(max-width $lg) {
+      display: block;
+    }
+  }
+}

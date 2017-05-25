@@ -1,0 +1,42 @@
+include ../bemto/bemto
+include ../blocks/index
+include ../header/_header
+include ../footer/_footer
+
++header("Riverina")
+
+  main.l-wrapper
+    +b.l-riverina
+      +e.SECTION.info
+        +b-info-section('img/region.png', "THE RIVERINA")
+          block descr
+            p.lg The McWilliam family pioneered the Riverina wine region in 1913 when J.J. McWilliam carted 50,000 vine cuttings to the largely untested region and planted them in a nursery. Since that time the wide Riverina plain, centred around Griffith and situated on the banks of the Murrumbidgee, has continued to grow as a respected and successful winemaking region.
+            p.lg Today the winemaking region covers 20,000 hectares and is the largest wine producing region in NSW, as well as the second largest in Australia. Among other varietals, the region has a reputation of producing high quality Shiraz, Chardonnay and Semillon wines.
+
+      +e.SECTION.about
+
+        +e.about-riverina
+          p The soaring temperatures of inland NSW throughout the Summer months mean that irrigation technique is one of the primary influences on winemaking in the region. During the high growing season the mean temperature climbs to almost 24 degrees Celcius. This accompanies low relative humidity and steady rainfall throughout the year. The Autumn months see the region deal with a combination of rain, humidity and fog, factors which need to be managed to prevent vine damage.
+          p These climatic factors mean that vineyard control and winemaking technique are key to successful winemaking in the region. Given that the Riverina has managed to grow to become NSW’s second largest wine producing region, the processes have clearly been effectively tailored to the region. The presence of major wineries in the region and the quality of wines produced are also testament to the skill of winemakers in harnessing and controlling these natural influences for the benefit of the wine.
+          p As well as producing a range of quality mainstream varietals like Shiraz and Chardonnay, the region has become particularly well know for producing exceptional dessert wines. The International Sweet Wine Challenge is held annually as part of the Riverina Wine Show to celebrate a style of wine which has become closely associated with the region.
+
+        +e.facts
+          +b-riverina-facts
+
+      +e.posts
+
+        +b-blog-article('img/region-half.png', 1)
+          .m-heading
+            h1 EXPLORE OUR OTHER REGIONS
+
+          a(href="#").m-btn LEARN MORE
+
+
+        +b-blog-article('img/hanwood.png', 1)
+          .m-heading
+            h1 EXPLORE WINES FROM THE REGION
+
+          a(href="#").m-btn LEARN MORE
+
+
+  +footer()

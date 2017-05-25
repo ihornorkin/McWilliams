@@ -1,0 +1,108 @@
+.l-contact-form {
+  align-content: center;
+  background-color: $charcoal-grey;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  min-height: 15rem;
+  padding: 0 6rem;
+  position: relative;
+
+  @include breakpoint(max-width $lg) {
+    flex-direction: column;
+  }
+
+  @include breakpoint(max-width $tablet) {
+    display: block;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 2.7rem 0 1.4rem;
+  }
+
+  &__description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    letter-spacing: .3px;
+    line-height: 1.2;
+    max-width: 53.1rem;
+    width: 100%;
+
+    @include breakpoint(max-width $lg) {
+      display: block;
+      max-width: 100%;
+      text-align: center;
+    }
+
+    @include breakpoint(max-width $tablet) {
+      flex-basis: 100%;
+
+      h2,
+      p {
+        font-size: 1.4rem;
+      }
+    }
+  }
+
+  .l-contact-form__form {
+    align-items: center;
+    display: flex;
+    flex-grow: 1;
+    padding: 0;
+
+    @include breakpoint(max-width $lg) {
+      justify-content: space-around;
+    }
+
+    @include breakpoint(max-width $tablet) {
+      display: block;
+    }
+  }
+
+  &__form {
+    @include breakpoint(max-width $tablet) {
+      display: block;
+      padding: 0 6rem;
+    }
+
+    .l-contact-form__form {
+      padding: 0 2.5rem 0 3.5rem;
+
+      @include breakpoint(max-width $lg) {
+        padding: 0;
+      }
+
+      @include breakpoint(max-width $tablet) {
+        display: block;
+        padding: 0 6rem;
+      }
+
+      span > span {
+        position: absolute;
+        width: 20rem;
+      }
+
+      .ajax-loader {
+        display: none;
+      }
+    }
+
+    .m-input-group {
+      display: inline-block;
+      float: left;
+      max-width: 25rem;
+      width: 100%;
+
+      @include breakpoint(max-width $tablet) {
+        display: block;
+        max-width: 100%;
+        width: 100%;
+        margin-right: 0;
+      }
+    }
+
+    .m-btn {
+      min-width: 18rem;
+    }
+  }
+}

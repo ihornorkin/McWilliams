@@ -1,0 +1,15 @@
+mixin b-blog-article(url, mod)
+
+  //START blog post
+  +b.ARTICLE.m-blog-article
+    +e.FIGURE.figure
+      - var modifier= mod
+        case  modifier
+          when 0: +e.IMG(src= url alt="alt").image.--left
+          when 1: +e.IMG(src= url alt="alt").image.--right
+          default: +e.IMG(src= url alt="alt").image.
+    +e.descr-wrapper
+      block
+
+  //END blog post
+
